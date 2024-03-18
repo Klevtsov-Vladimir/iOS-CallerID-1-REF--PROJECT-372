@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Archivo_Condensed-SemiBold.ttf</string>
+		<string>Manrope[wght].ttf</string>
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-9730471465379367~3509878594</string>

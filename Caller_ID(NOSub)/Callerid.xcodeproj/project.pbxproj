@@ -106,7 +106,6 @@
 		1FB482A72A53413900228689 /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB482A62A53413900228689 /* CallDirectoryHandler.swift */; };
 		1FB482AB2A53413900228689 /* CallDirectoryExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1FB482A42A53413900228689 /* CallDirectoryExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FB7DD592A90FCF6005CC235 /* LoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7DD572A90FCF6005CC235 /* LoaderController.swift */; };
-		1FB7DD5A2A90FCF6005CC235 /* LoaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7DD582A90FCF6005CC235 /* LoaderController.xib */; };
 		1FB7DD5E2A93AE78005CC235 /* BLockCloseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB7DD5C2A93AE78005CC235 /* BLockCloseCell.swift */; };
 		1FB7DD5F2A93AE78005CC235 /* BLockCloseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB7DD5D2A93AE78005CC235 /* BLockCloseCell.xib */; };
 		1FDDC5C32A581BD1000FC55B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDC5C22A581BD1000FC55B /* GoogleService-Info.plist */; };
@@ -136,9 +135,6 @@
 		1FE2941D2A53426F00343EBD /* OnboardingSettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE294082A53426F00343EBD /* OnboardingSettingsCell.xib */; };
 		1FE2941E2A53426F00343EBD /* OnboardingSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE294092A53426F00343EBD /* OnboardingSettingsController.xib */; };
 		1FE2941F2A53426F00343EBD /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE2940B2A53426F00343EBD /* OnboardingController.swift */; };
-		1FE294202A53426F00343EBD /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE2940D2A53426F00343EBD /* OnboardingCell.swift */; };
-		1FE294212A53426F00343EBD /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2940E2A53426F00343EBD /* OnboardingCell.xib */; };
-		1FE294222A53426F00343EBD /* OnboardingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE2940F2A53426F00343EBD /* OnboardingController.xib */; };
 		1FE294232A53426F00343EBD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE294112A53426F00343EBD /* String.swift */; };
 		1FE294242A53426F00343EBD /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE294122A53426F00343EBD /* NibDesignable.swift */; };
 		1FE294252A53426F00343EBD /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE294132A53426F00343EBD /* UITextView.swift */; };
@@ -182,6 +178,11 @@
 		1FF9D4A22A5C632200755085 /* FindPhoneController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF9D4A02A5C632200755085 /* FindPhoneController.xib */; };
 		6FC979582BA8A23100B5BEF1 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC979572BA8A23100B5BEF1 /* GoogleMobileAds */; };
 		6FC9795B2BA8A24C00B5BEF1 /* GoogleUserMessagingPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC9795A2BA8A24C00B5BEF1 /* GoogleUserMessagingPlatform */; };
+		6FC9796F2BA8CA0D00B5BEF1 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC9796E2BA8CA0D00B5BEF1 /* Reachability */; };
+		6FC979792BA8E16000B5BEF1 /* Manrope[wght].ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FC979782BA8E16000B5BEF1 /* Manrope[wght].ttf */; };
+		6FC9797C2BA8E53B00B5BEF1 /* LoaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC9797B2BA8E53B00B5BEF1 /* LoaderController.xib */; };
+		6FC979822BA8F29D00B5BEF1 /* BackGroungGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC979812BA8F29D00B5BEF1 /* BackGroungGradient.swift */; };
+		6FC979852BA8FDB000B5BEF1 /* OnboardingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC979842BA8FDB000B5BEF1 /* OnboardingController.xib */; };
 		DFCE0B5BCAEBED1DF837B803 /* Pods_Callerid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA32DC4CF73C78B8BE2FE77 /* Pods_Callerid.framework */; };
 /* End PBXBuildFile section */
 
@@ -306,7 +307,6 @@
 		1FB482A62A53413900228689 /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
 		1FB482A82A53413900228689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FB7DD572A90FCF6005CC235 /* LoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderController.swift; sourceTree = "<group>"; };
-		1FB7DD582A90FCF6005CC235 /* LoaderController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderController.xib; sourceTree = "<group>"; };
 		1FB7DD5C2A93AE78005CC235 /* BLockCloseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLockCloseCell.swift; sourceTree = "<group>"; };
 		1FB7DD5D2A93AE78005CC235 /* BLockCloseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLockCloseCell.xib; sourceTree = "<group>"; };
 		1FDDC5C22A581BD1000FC55B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -329,9 +329,6 @@
 		1FE294082A53426F00343EBD /* OnboardingSettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingSettingsCell.xib; sourceTree = "<group>"; };
 		1FE294092A53426F00343EBD /* OnboardingSettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingSettingsController.xib; sourceTree = "<group>"; };
 		1FE2940B2A53426F00343EBD /* OnboardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
-		1FE2940D2A53426F00343EBD /* OnboardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
-		1FE2940E2A53426F00343EBD /* OnboardingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
-		1FE2940F2A53426F00343EBD /* OnboardingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingController.xib; sourceTree = "<group>"; };
 		1FE294112A53426F00343EBD /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		1FE294122A53426F00343EBD /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
 		1FE294132A53426F00343EBD /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
@@ -371,6 +368,12 @@
 		1FF9D4A02A5C632200755085 /* FindPhoneController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPhoneController.xib; sourceTree = "<group>"; };
 		394B96B096A951B5A3EF6206 /* Pods-CallDirectoryExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallDirectoryExtension.release.xcconfig"; path = "Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5F917DC3ABD8F70B42837A23 /* Pods-Callerid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callerid.debug.xcconfig"; path = "Target Support Files/Pods-Callerid/Pods-Callerid.debug.xcconfig"; sourceTree = "<group>"; };
+		6FC979782BA8E16000B5BEF1 /* Manrope[wght].ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope[wght].ttf"; sourceTree = "<group>"; };
+		6FC9797A2BA8E53B00B5BEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoaderController.xib; sourceTree = "<group>"; };
+		6FC9797F2BA8E68200B5BEF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoaderController.strings; sourceTree = "<group>"; };
+		6FC979812BA8F29D00B5BEF1 /* BackGroungGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroungGradient.swift; sourceTree = "<group>"; };
+		6FC979832BA8FDB000B5BEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OnboardingController.xib; sourceTree = "<group>"; };
+		6FC979882BA8FDCE00B5BEF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OnboardingController.strings; sourceTree = "<group>"; };
 		B99F9215AFC96CD28CF814C5 /* Pods-Callerid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callerid.release.xcconfig"; path = "Target Support Files/Pods-Callerid/Pods-Callerid.release.xcconfig"; sourceTree = "<group>"; };
 		DAA32DC4CF73C78B8BE2FE77 /* Pods_Callerid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callerid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -383,6 +386,7 @@
 				1FF9D4962A5C510800755085 /* RealmSwift in Frameworks */,
 				1FED08192A9E12520079A928 /* SwiftyGif in Frameworks */,
 				1FF9D4942A5C510800755085 /* Realm in Frameworks */,
+				6FC9796F2BA8CA0D00B5BEF1 /* Reachability in Frameworks */,
 				1F4C6F652A6961C200FCEC0D /* WebBridge in Frameworks */,
 				6FC9795B2BA8A24C00B5BEF1 /* GoogleUserMessagingPlatform in Frameworks */,
 				1F4C6F612A6961C200FCEC0D /* Sociomantic in Frameworks */,
@@ -805,10 +809,10 @@
 				1FB4828C2A53410600228689 /* AppDelegate.swift */,
 				1FDDC5C22A581BD1000FC55B /* GoogleService-Info.plist */,
 				1F30D3F52A5436E600C13AE9 /* CountryCodes.json */,
-				1F4C6F852A69894B00FCEC0D /* Archivo_Condensed-SemiBold.ttf */,
 				1FE294282A53427C00343EBD /* Constants.swift */,
 				1FE2943F2A53475100343EBD /* Localizable.strings */,
 				1FB482952A53410700228689 /* Assets.xcassets */,
+				6FC9795C2BA8BDAD00B5BEF1 /* fonts */,
 				1FB482972A53410700228689 /* LaunchScreen.storyboard */,
 				1FB4829A2A53410700228689 /* Info.plist */,
 			);
@@ -829,7 +833,7 @@
 			isa = PBXGroup;
 			children = (
 				1FB7DD572A90FCF6005CC235 /* LoaderController.swift */,
-				1FB7DD582A90FCF6005CC235 /* LoaderController.xib */,
+				6FC9797B2BA8E53B00B5BEF1 /* LoaderController.xib */,
 			);
 			path = LoaderScreen;
 			sourceTree = "<group>";
@@ -990,20 +994,10 @@
 		1FE2940A2A53426F00343EBD /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				1FE2940C2A53426F00343EBD /* Cell */,
 				1FE2940B2A53426F00343EBD /* OnboardingController.swift */,
-				1FE2940F2A53426F00343EBD /* OnboardingController.xib */,
+				6FC979842BA8FDB000B5BEF1 /* OnboardingController.xib */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		1FE2940C2A53426F00343EBD /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				1FE2940D2A53426F00343EBD /* OnboardingCell.swift */,
-				1FE2940E2A53426F00343EBD /* OnboardingCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		1FE294102A53426F00343EBD /* Extentions */ = {
@@ -1025,6 +1019,7 @@
 		1FE294142A53426F00343EBD /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				6FC979802BA8F27600B5BEF1 /* BackgroundGradient */,
 				1F4585932A614D9E0089BF76 /* BetterNameTypeView */,
 				1FE728782A5EFAE800A402A0 /* FunctionsView */,
 				1FE728532A5E93BF00A402A0 /* SearchView */,
@@ -1181,6 +1176,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6FC9795C2BA8BDAD00B5BEF1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6FC979782BA8E16000B5BEF1 /* Manrope[wght].ttf */,
+				1F4C6F852A69894B00FCEC0D /* Archivo_Condensed-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		6FC979802BA8F27600B5BEF1 /* BackgroundGradient */ = {
+			isa = PBXGroup;
+			children = (
+				6FC979812BA8F29D00B5BEF1 /* BackGroungGradient.swift */,
+			);
+			path = BackgroundGradient;
+			sourceTree = "<group>";
+		};
 		A0942B4CBC8905E69E9DC368 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,6 +1246,7 @@
 				1FED081B2A9E12690079A928 /* SnapKit */,
 				6FC979572BA8A23100B5BEF1 /* GoogleMobileAds */,
 				6FC9795A2BA8A24C00B5BEF1 /* GoogleUserMessagingPlatform */,
+				6FC9796E2BA8CA0D00B5BEF1 /* Reachability */,
 			);
 			productName = Callerid;
 			productReference = 1FB482892A53410600228689 /* Callerid.app */;
@@ -1297,6 +1310,7 @@
 				1FED081A2A9E12690079A928 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				6FC979562BA8A23100B5BEF1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				6FC979592BA8A24C00B5BEF1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */,
+				6FC9796D2BA8CA0D00B5BEF1 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 			);
 			productRefGroup = 1FB4828A2A53410600228689 /* Products */;
 			projectDirPath = "";
@@ -1349,12 +1363,11 @@
 				1F52C2722A811A6200615A1E /* ViewedProfileCell.xib in Resources */,
 				1F69A8782A77F18C00266556 /* PremiumSpamController.xib in Resources */,
 				1F547A332A67C3B8001A62D0 /* BlockNameCell.xib in Resources */,
-				1FE294212A53426F00343EBD /* OnboardingCell.xib in Resources */,
-				1FE294222A53426F00343EBD /* OnboardingController.xib in Resources */,
+				6FC979852BA8FDB000B5BEF1 /* OnboardingController.xib in Resources */,
 				1FF9D48A2A5C1A5C00755085 /* CallsIndentTern.xib in Resources */,
 				1FA7CED32A5FEE5A00ECA7ED /* FuncCell.xib in Resources */,
 				1F30D3E52A54089800C13AE9 /* CallIdentifierController.xib in Resources */,
-				1FB7DD5A2A90FCF6005CC235 /* LoaderController.xib in Resources */,
+				6FC9797C2BA8E53B00B5BEF1 /* LoaderController.xib in Resources */,
 				1F52C26D2A81172400615A1E /* ViewedProfileController.xib in Resources */,
 				1FB3277D2A64677D0029E1EA /* SpamProtectCell.xib in Resources */,
 				1F49B6862A667FFA00481313 /* PrivacyCenterController.xib in Resources */,
@@ -1362,6 +1375,7 @@
 				1F49B6952A669AB700481313 /* AboutController.xib in Resources */,
 				1F69A8732A77D32600266556 /* DeactiveAccCell.xib in Resources */,
 				1F4585922A6147840089BF76 /* BetterNameController.xib in Resources */,
+				6FC979792BA8E16000B5BEF1 /* Manrope[wght].ttf in Resources */,
 				1FE2941D2A53426F00343EBD /* OnboardingSettingsCell.xib in Resources */,
 				1FF9D4872A5BFCEB00755085 /* ResultsPhonesController.xib in Resources */,
 				1FE7286D2A5EF9DF00A402A0 /* PhoneBannerCell.xib in Resources */,
@@ -1473,7 +1487,6 @@
 				1FA7CED52A5FF94F00ECA7ED /* UITableView.swift in Sources */,
 				1F49B6A32A66EE3D00481313 /* BlockReportCell.swift in Sources */,
 				1FF9D4A12A5C632200755085 /* FindPhoneController.swift in Sources */,
-				1FE294202A53426F00343EBD /* OnboardingCell.swift in Sources */,
 				1FE294252A53426F00343EBD /* UITextView.swift in Sources */,
 				1F547A322A67C3B8001A62D0 /* BlockNameCell.swift in Sources */,
 				1F4708CE2A547015007F46FE /* CountriesListController.swift in Sources */,
@@ -1497,6 +1510,7 @@
 				1FE728762A5EFA2800A402A0 /* FunctionsPhoneCell.swift in Sources */,
 				1F69A8722A77D32600266556 /* DeactiveAccCell.swift in Sources */,
 				1F30D3E42A54089800C13AE9 /* CallIdentifierController.swift in Sources */,
+				6FC979822BA8F29D00B5BEF1 /* BackGroungGradient.swift in Sources */,
 				1F30D3FB2A5437D700C13AE9 /* Countrydsfsdfsdddd.swift in Sources */,
 				1FE294272A53426F00343EBD /* MainButton.swift in Sources */,
 				1F30D3FD2A5442B400C13AE9 /* Network.swift in Sources */,
@@ -1582,6 +1596,24 @@
 				1F436CD52AA0948A0015EDC0 /* ar */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6FC9797B2BA8E53B00B5BEF1 /* LoaderController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FC9797A2BA8E53B00B5BEF1 /* Base */,
+				6FC9797F2BA8E68200B5BEF1 /* en */,
+			);
+			name = LoaderController.xib;
+			sourceTree = "<group>";
+		};
+		6FC979842BA8FDB000B5BEF1 /* OnboardingController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FC979832BA8FDB000B5BEF1 /* Base */,
+				6FC979882BA8FDCE00B5BEF1 /* en */,
+			);
+			name = OnboardingController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1968,6 +2000,14 @@
 				minimumVersion = 2.3.0;
 			};
 		};
+		6FC9796D2BA8CA0D00B5BEF1 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2075,6 +2115,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6FC979592BA8A24C00B5BEF1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */;
 			productName = GoogleUserMessagingPlatform;
+		};
+		6FC9796E2BA8CA0D00B5BEF1 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FC9796D2BA8CA0D00B5BEF1 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

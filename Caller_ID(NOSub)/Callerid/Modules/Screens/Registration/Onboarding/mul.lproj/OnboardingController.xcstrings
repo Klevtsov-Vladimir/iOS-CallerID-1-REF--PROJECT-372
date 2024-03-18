@@ -1,0 +1,30 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "qa7-0r-AsU.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"qa7-0r-AsU\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "zqo-Hc-lO5.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"zqo-Hc-lO5\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

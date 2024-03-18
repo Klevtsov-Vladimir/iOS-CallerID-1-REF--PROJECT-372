@@ -13,7 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        var controller = UIViewController()
         
+        controller = LoaderController()
+
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = true
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        
+        networkConnection()
+        
+        return true
+    }
+    
+    func networkConnection() {
         Network.shared.loadJson {
             self.setupNotifications()
             
@@ -53,22 +70,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
             
-            var controller = UIViewController()
             
-            controller = LoaderController()
-
-            let navigationController = UINavigationController(rootViewController: controller)
-            navigationController.modalPresentationStyle = .fullScreen
-            navigationController.isNavigationBarHidden = true
-            
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = navigationController
-            self.window?.makeKeyAndVisible()
         }
-        
-        return true
     }
-    
     func openMainApp() -> UIViewController {
         if (UserDefaults.standard.string(forKey: "phone")?.isEmpty ?? false) || UserDefaults.standard.string(forKey: "phone")?.isEmpty == nil {
             return OnboardingController()
