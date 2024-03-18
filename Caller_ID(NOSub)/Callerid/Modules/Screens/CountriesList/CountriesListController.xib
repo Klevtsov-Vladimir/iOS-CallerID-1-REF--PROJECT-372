@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountriesListController" customModule="Callerid" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="K9n-4q-C7i" id="mhK-TS-KOV"/>
+                <outlet property="searchBar" destination="r3C-e9-Nzw" id="Y1u-yY-eI4"/>
+                <outlet property="tableView" destination="xz5-mW-1C9" id="4Ey-hg-pRX"/>
+                <outlet property="titleLabel" destination="oxp-Mp-yfn" id="6V1-UF-2Pv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xz5-mW-1C9">
+                    <rect key="frame" x="16" y="114" width="361" height="704"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" id="r3C-e9-Nzw">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="ZyU-pV-ySQ"/>
+                        </connections>
+                    </searchBar>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9n-4q-C7i">
+                    <rect key="frame" x="20" y="69" width="46" height="30"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="VCP-5x-gSw"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-Mp-yfn">
+                    <rect key="frame" x="175.66666666666666" y="73.666666666666671" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xz5-mW-1C9" secondAttribute="bottom" id="1x1-on-T7f"/>
+                <constraint firstItem="xz5-mW-1C9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Avc-GB-R66"/>
+                <constraint firstItem="oxp-Mp-yfn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FL4-uG-aom"/>
+                <constraint firstItem="oxp-Mp-yfn" firstAttribute="centerY" secondItem="K9n-4q-C7i" secondAttribute="centerY" id="LbY-PC-Kja"/>
+                <constraint firstItem="xz5-mW-1C9" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="MJE-UY-dsA"/>
+                <constraint firstItem="K9n-4q-C7i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="qEf-en-waz"/>
+                <constraint firstItem="xz5-mW-1C9" firstAttribute="top" secondItem="K9n-4q-C7i" secondAttribute="bottom" constant="15" id="tAG-Te-XmE"/>
+                <constraint firstItem="K9n-4q-C7i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yMN-VO-Kij"/>
+            </constraints>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

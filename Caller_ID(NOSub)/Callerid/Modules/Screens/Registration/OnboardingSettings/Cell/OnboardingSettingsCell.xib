@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OnboardingSettingsCell" customModule="Callerid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="161"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6uz-Wr-V24">
+                        <rect key="frame" x="27" y="81" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6uz-Wr-V24" secondAttribute="height" multiplier="1:1" id="2NV-lO-acU"/>
+                            <constraint firstAttribute="width" constant="24" id="8hE-Hz-LBh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzc-4M-hEQ">
+                        <rect key="frame" x="71" y="83" width="205" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="hzc-4M-hEQ" firstAttribute="centerY" secondItem="6uz-Wr-V24" secondAttribute="centerY" id="ZUy-jq-WE3"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="hzc-4M-hEQ" secondAttribute="trailing" constant="27" id="c8i-ei-Vvo"/>
+                <constraint firstItem="6uz-Wr-V24" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="27" id="g5Z-Tv-nre"/>
+                <constraint firstItem="hzc-4M-hEQ" firstAttribute="leading" secondItem="6uz-Wr-V24" secondAttribute="trailing" constant="20" id="iLp-ay-Y0T"/>
+                <constraint firstItem="6uz-Wr-V24" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="vgj-uU-hqt"/>
+            </constraints>
+            <size key="customSize" width="303" height="161"/>
+            <connections>
+                <outlet property="imageView" destination="6uz-Wr-V24" id="s9g-oB-YkP"/>
+                <outlet property="titleLabel" destination="hzc-4M-hEQ" id="iOW-GV-UjA"/>
+            </connections>
+            <point key="canvasLocation" x="377.86259541984731" y="25.704225352112676"/>
+        </collectionViewCell>
+    </objects>
+</document>

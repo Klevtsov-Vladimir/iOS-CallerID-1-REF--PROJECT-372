@@ -1,0 +1,1115 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		7B02E6EAC0B3A54BD069DBD5F9205870 /* PushwooshXCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F3DDAEA9DF0D20344EE857816CFEFF08 /* Build configuration list for PBXAggregateTarget "PushwooshXCFramework" */;
+			buildPhases = (
+				9D989BEBD391BCD26D4EBD33E0D75449 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = PushwooshXCFramework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0A504E1F264575DA2161C61F7A287A6B /* CHIPageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B88DD6E4242741B8886C2A2856CAE /* CHIPageControllable.swift */; };
+		1B69D6BCE8D13162541FB5F0E5B8494E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		1FE95DD9365B60DDE8F1107BEF0D3475 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BDCF85B4B4C9684AFB844B9829DD1 /* CHIPageControlJaloro.swift */; };
+		23B1CAE9CD81CB7AFF185A6D43E6FA5E /* Pods-Callerid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28743B6F7828AEC438C116995B35FA61 /* Pods-Callerid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F82780FDB17916679109A6F965EF80B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		4330DF48C89DF0EBDD58AF4D09CB9A5D /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD8230EB7E1752AF4E31E5F1F020386 /* CHIBasePageControl.swift */; };
+		433A6710833C2DBD4A38CA7D275BCD7B /* CHIPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 730C29236691BBB921E3FFD158F84FDA /* CHIPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DD59BA0E0B190894E95B1A243E5CEA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		51423C0F356FAAB892695FC0136D393B /* Pods-Callerid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47045F56C13E3D07CF957C41414000BC /* Pods-Callerid-dummy.m */; };
+		5933FA8227F3FF294803DEAFC043832D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		63BA7A68438C185B1B6DA8CBC0FD3F0E /* CHIPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09419A6AA42A5A7E34A1F8B9C2DAFF08 /* CHIPageControl-dummy.m */; };
+		7F8D055737543FFF666B4A892447EE2C /* KILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF56C398D10541F5E07FCDAEAB0ED97 /* KILabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		960E484C3E7178C5D762A8DD7965F966 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		A0AFFBF69166CF034330F27E39C02C91 /* KILabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E18F9E3E01C0BE5756AAD729900C7C44 /* KILabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF2CC8B8841A3D68E46BCA9DA67140B7 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6954D98FBD17E3E25518E5ECF842F755 /* KILabel.m */; };
+		D2F812A3BD06AAF6263FCB780C62527E /* KILabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C089BE63C9144567291EBC221D85F4 /* KILabel-dummy.m */; };
+		D6018F851ECC1748E9639DD8447D78C3 /* Pods-CallDirectoryExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FEF8F6FCE32CA2275773144F4E8F12 /* Pods-CallDirectoryExtension-dummy.m */; };
+		D8FA480A1D4C7AA4E232237425E5C800 /* Pods-CallDirectoryExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 669094A06FBFFFA35BAA44CCFC5054E3 /* Pods-CallDirectoryExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5827FDE12B6F0BE6053950661A0158F /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCFFB4B3BE28D68EEC9F2D0D24FEA0 /* CHILayer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1120DC54947122F5DFA427CA9ED58687 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F3B30A88EC9B5AEE20F7590BBB949FF;
+			remoteInfo = KILabel;
+		};
+		23B5A6B30F360195A52EC87C28BA1483 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A7AC722D45BA5EF49F00D98C86978B;
+			remoteInfo = CHIPageControl;
+		};
+		71B9F9F2FBC4A77859E65F7CFBAA646E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B02E6EAC0B3A54BD069DBD5F9205870;
+			remoteInfo = PushwooshXCFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		051C4DCB6D32A1766D800DFE28AEEF8A /* Pods-CallDirectoryExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CallDirectoryExtension.modulemap"; sourceTree = "<group>"; };
+		05E7B3C0FC3EB13F98B3E8A90C64972C /* Pods-CallDirectoryExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CallDirectoryExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		093D7E37BC2ADBE71227E1D229AF7907 /* KILabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KILabel-prefix.pch"; sourceTree = "<group>"; };
+		09419A6AA42A5A7E34A1F8B9C2DAFF08 /* CHIPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHIPageControl-dummy.m"; sourceTree = "<group>"; };
+		21142DA3ED2FA0C1B842890219CADD22 /* PushwooshXCFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PushwooshXCFramework.debug.xcconfig; sourceTree = "<group>"; };
+		26A97867A3F14DFDCDEE9F2424448E2C /* Pods-CallDirectoryExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CallDirectoryExtension-Info.plist"; sourceTree = "<group>"; };
+		28743B6F7828AEC438C116995B35FA61 /* Pods-Callerid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Callerid-umbrella.h"; sourceTree = "<group>"; };
+		33F8098246D8D126E404560772D1D2E1 /* Pods-Callerid-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Callerid-Info.plist"; sourceTree = "<group>"; };
+		37032E1C344F48D15BDCF0BA7107C748 /* KILabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KILabel-Info.plist"; sourceTree = "<group>"; };
+		3D33559FC10A61DE951A52F42A690344 /* CHIPageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.debug.xcconfig; sourceTree = "<group>"; };
+		3D4B88DD6E4242741B8886C2A2856CAE /* CHIPageControllable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControllable.swift; path = CHIPageControl/Core/CHIPageControllable.swift; sourceTree = "<group>"; };
+		3F3FB745B02024B6CD3D4F0F162FA7A9 /* CHIPageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CHIPageControl-Info.plist"; sourceTree = "<group>"; };
+		4054D6E012FE377921DEEFE2E2272BD3 /* Pods-CallDirectoryExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CallDirectoryExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		41C9178DA9F560395714F76E61058B53 /* Pods-CallDirectoryExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CallDirectoryExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		47045F56C13E3D07CF957C41414000BC /* Pods-Callerid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Callerid-dummy.m"; sourceTree = "<group>"; };
+		48FEF8F6FCE32CA2275773144F4E8F12 /* Pods-CallDirectoryExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CallDirectoryExtension-dummy.m"; sourceTree = "<group>"; };
+		4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CHIPageControl; path = CHIPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E84171357B21DD24A8139EEFD66434 /* Pods-Callerid */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Callerid"; path = Pods_Callerid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E472B52253D7CF63567DFF6245EFC3 /* CHIPageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.release.xcconfig; sourceTree = "<group>"; };
+		5EC2A070332B0BE6AD1CA02ED9C54B70 /* KILabel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KILabel; path = KILabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61100A2B91D34FE65BCCC5B37DE97030 /* PushwooshXCFramework-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "PushwooshXCFramework-xcframeworks.sh"; sourceTree = "<group>"; };
+		669094A06FBFFFA35BAA44CCFC5054E3 /* Pods-CallDirectoryExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CallDirectoryExtension-umbrella.h"; sourceTree = "<group>"; };
+		6954D98FBD17E3E25518E5ECF842F755 /* KILabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KILabel.m; path = KILabel/Source/KILabel.m; sourceTree = "<group>"; };
+		69FE9971C42F29263625DD42D887F21C /* Pods-Callerid-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Callerid-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6EF56C398D10541F5E07FCDAEAB0ED97 /* KILabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KILabel.h; path = KILabel/Source/KILabel.h; sourceTree = "<group>"; };
+		71A59C82C1E64E06BBC97AE3C4D9F286 /* Pods-Callerid-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Callerid-frameworks.sh"; sourceTree = "<group>"; };
+		730C29236691BBB921E3FFD158F84FDA /* CHIPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-umbrella.h"; sourceTree = "<group>"; };
+		75F7873E58D41E46338AA94AFD82F756 /* KILabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KILabel.debug.xcconfig; sourceTree = "<group>"; };
+		77C3865F91ACD9E33615257E0DE76578 /* Pods-Callerid-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Callerid-acknowledgements.plist"; sourceTree = "<group>"; };
+		7A0E8AC40F8F1A70EA95AF465F1FDC07 /* CHIPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-prefix.pch"; sourceTree = "<group>"; };
+		870DDCB9ED0B3C489E919EF93A4AE9A3 /* Pods-Callerid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Callerid.release.xcconfig"; sourceTree = "<group>"; };
+		8B274970F536336AD22D59FDBC6FB6B3 /* Pods-Callerid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Callerid.debug.xcconfig"; sourceTree = "<group>"; };
+		8BDCFFB4B3BE28D68EEC9F2D0D24FEA0 /* CHILayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHILayer.swift; path = CHIPageControl/Core/CHILayer.swift; sourceTree = "<group>"; };
+		8CD8230EB7E1752AF4E31E5F1F020386 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIBasePageControl.swift; path = CHIPageControl/Core/CHIBasePageControl.swift; sourceTree = "<group>"; };
+		9418DA914A0678645D944E1872B58E01 /* CHIPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHIPageControl.modulemap; sourceTree = "<group>"; };
+		962B4B210F0F6ABB032EA98699B0B7A4 /* Pods-Callerid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Callerid.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1A49EAF4C5D35FEA5DFBB47012082CC /* Pods-CallDirectoryExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CallDirectoryExtension.release.xcconfig"; sourceTree = "<group>"; };
+		AE159B05CAF581AA25739EECC3BFE809 /* KILabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KILabel.release.xcconfig; sourceTree = "<group>"; };
+		BF21F8E64D6BBC1729C1D16DE5613E70 /* PushwooshXCFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PushwooshXCFramework.release.xcconfig; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E18F9E3E01C0BE5756AAD729900C7C44 /* KILabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KILabel-umbrella.h"; sourceTree = "<group>"; };
+		E2B850AEAAB25520C29BAA11863A1DA5 /* KILabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KILabel.modulemap; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EFB8F50D74C10ADDE3FBC673CC670470 /* Pods-CallDirectoryExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CallDirectoryExtension"; path = Pods_CallDirectoryExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C089BE63C9144567291EBC221D85F4 /* KILabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KILabel-dummy.m"; sourceTree = "<group>"; };
+		FE631CA80877B001E29FE2F5548D5EC1 /* Pushwoosh.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = Pushwoosh.xcframework; path = XCFramework/Pushwoosh.xcframework; sourceTree = "<group>"; };
+		FF7BDCF85B4B4C9684AFB844B9829DD1 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlJaloro.swift; path = CHIPageControl/CHIPageControlJaloro.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		232D4431BA7474B4D99910CD4D41160B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960E484C3E7178C5D762A8DD7965F966 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35F6E1A7A18990A535DCA5E145563746 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD59BA0E0B190894E95B1A243E5CEA1 /* Foundation.framework in Frameworks */,
+				1B69D6BCE8D13162541FB5F0E5B8494E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7402C98A2005164F7FDA4CDCE724206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F82780FDB17916679109A6F965EF80B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F454C5699FB8E5EBFFDC44EE137F71F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5933FA8227F3FF294803DEAFC043832D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		388BEE7D01E661134196BD768BB85E2F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2B850AEAAB25520C29BAA11863A1DA5 /* KILabel.modulemap */,
+				F8C089BE63C9144567291EBC221D85F4 /* KILabel-dummy.m */,
+				37032E1C344F48D15BDCF0BA7107C748 /* KILabel-Info.plist */,
+				093D7E37BC2ADBE71227E1D229AF7907 /* KILabel-prefix.pch */,
+				E18F9E3E01C0BE5756AAD729900C7C44 /* KILabel-umbrella.h */,
+				75F7873E58D41E46338AA94AFD82F756 /* KILabel.debug.xcconfig */,
+				AE159B05CAF581AA25739EECC3BFE809 /* KILabel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KILabel";
+			sourceTree = "<group>";
+		};
+		407180D307ADA2EE92E96960D24A3BEA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				764CD7B41F80A067C784732E55F520BD /* Pods-CallDirectoryExtension */,
+				D2D4E6BC058D4D87C83D6D49100FF9CD /* Pods-Callerid */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		46E94F5254CDD87E062690826FA7D691 /* PushwooshXCFramework */ = {
+			isa = PBXGroup;
+			children = (
+				9A007D12434076DE8C245F8C382D2D04 /* Core */,
+				A6BAF3178EC23FB07514FC2FF2E03333 /* Support Files */,
+			);
+			name = PushwooshXCFramework;
+			path = PushwooshXCFramework;
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		764CD7B41F80A067C784732E55F520BD /* Pods-CallDirectoryExtension */ = {
+			isa = PBXGroup;
+			children = (
+				051C4DCB6D32A1766D800DFE28AEEF8A /* Pods-CallDirectoryExtension.modulemap */,
+				4054D6E012FE377921DEEFE2E2272BD3 /* Pods-CallDirectoryExtension-acknowledgements.markdown */,
+				41C9178DA9F560395714F76E61058B53 /* Pods-CallDirectoryExtension-acknowledgements.plist */,
+				48FEF8F6FCE32CA2275773144F4E8F12 /* Pods-CallDirectoryExtension-dummy.m */,
+				26A97867A3F14DFDCDEE9F2424448E2C /* Pods-CallDirectoryExtension-Info.plist */,
+				669094A06FBFFFA35BAA44CCFC5054E3 /* Pods-CallDirectoryExtension-umbrella.h */,
+				05E7B3C0FC3EB13F98B3E8A90C64972C /* Pods-CallDirectoryExtension.debug.xcconfig */,
+				A1A49EAF4C5D35FEA5DFBB47012082CC /* Pods-CallDirectoryExtension.release.xcconfig */,
+			);
+			name = "Pods-CallDirectoryExtension";
+			path = "Target Support Files/Pods-CallDirectoryExtension";
+			sourceTree = "<group>";
+		};
+		8AF172436E2A4769F849AD71E7A5816D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE631CA80877B001E29FE2F5548D5EC1 /* Pushwoosh.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		986558C190A083E330A16C3E0DA6DC36 /* Jaloro */ = {
+			isa = PBXGroup;
+			children = (
+				8CD8230EB7E1752AF4E31E5F1F020386 /* CHIBasePageControl.swift */,
+				8BDCFFB4B3BE28D68EEC9F2D0D24FEA0 /* CHILayer.swift */,
+				FF7BDCF85B4B4C9684AFB844B9829DD1 /* CHIPageControlJaloro.swift */,
+				3D4B88DD6E4242741B8886C2A2856CAE /* CHIPageControllable.swift */,
+			);
+			name = Jaloro;
+			sourceTree = "<group>";
+		};
+		9A007D12434076DE8C245F8C382D2D04 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8AF172436E2A4769F849AD71E7A5816D /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		9CD989038F7426A40C502189A33DCD9D /* CHIPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				986558C190A083E330A16C3E0DA6DC36 /* Jaloro */,
+				C3E2C810D41911C22257BF6F3EBF976C /* Support Files */,
+			);
+			name = CHIPageControl;
+			path = CHIPageControl;
+			sourceTree = "<group>";
+		};
+		A6BAF3178EC23FB07514FC2FF2E03333 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				61100A2B91D34FE65BCCC5B37DE97030 /* PushwooshXCFramework-xcframeworks.sh */,
+				21142DA3ED2FA0C1B842890219CADD22 /* PushwooshXCFramework.debug.xcconfig */,
+				BF21F8E64D6BBC1729C1D16DE5613E70 /* PushwooshXCFramework.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PushwooshXCFramework";
+			sourceTree = "<group>";
+		};
+		B2B23D6BAAB00D3450C2B6D089B09805 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */,
+				5EC2A070332B0BE6AD1CA02ED9C54B70 /* KILabel */,
+				EFB8F50D74C10ADDE3FBC673CC670470 /* Pods-CallDirectoryExtension */,
+				53E84171357B21DD24A8139EEFD66434 /* Pods-Callerid */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3E2C810D41911C22257BF6F3EBF976C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9418DA914A0678645D944E1872B58E01 /* CHIPageControl.modulemap */,
+				09419A6AA42A5A7E34A1F8B9C2DAFF08 /* CHIPageControl-dummy.m */,
+				3F3FB745B02024B6CD3D4F0F162FA7A9 /* CHIPageControl-Info.plist */,
+				7A0E8AC40F8F1A70EA95AF465F1FDC07 /* CHIPageControl-prefix.pch */,
+				730C29236691BBB921E3FFD158F84FDA /* CHIPageControl-umbrella.h */,
+				3D33559FC10A61DE951A52F42A690344 /* CHIPageControl.debug.xcconfig */,
+				54E472B52253D7CF63567DFF6245EFC3 /* CHIPageControl.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CHIPageControl";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				FB9919C873019540CD6A927B2C9A6425 /* Pods */,
+				B2B23D6BAAB00D3450C2B6D089B09805 /* Products */,
+				407180D307ADA2EE92E96960D24A3BEA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2D4E6BC058D4D87C83D6D49100FF9CD /* Pods-Callerid */ = {
+			isa = PBXGroup;
+			children = (
+				962B4B210F0F6ABB032EA98699B0B7A4 /* Pods-Callerid.modulemap */,
+				69FE9971C42F29263625DD42D887F21C /* Pods-Callerid-acknowledgements.markdown */,
+				77C3865F91ACD9E33615257E0DE76578 /* Pods-Callerid-acknowledgements.plist */,
+				47045F56C13E3D07CF957C41414000BC /* Pods-Callerid-dummy.m */,
+				71A59C82C1E64E06BBC97AE3C4D9F286 /* Pods-Callerid-frameworks.sh */,
+				33F8098246D8D126E404560772D1D2E1 /* Pods-Callerid-Info.plist */,
+				28743B6F7828AEC438C116995B35FA61 /* Pods-Callerid-umbrella.h */,
+				8B274970F536336AD22D59FDBC6FB6B3 /* Pods-Callerid.debug.xcconfig */,
+				870DDCB9ED0B3C489E919EF93A4AE9A3 /* Pods-Callerid.release.xcconfig */,
+			);
+			name = "Pods-Callerid";
+			path = "Target Support Files/Pods-Callerid";
+			sourceTree = "<group>";
+		};
+		D970F2FC62242BC99A1887FF479F4E84 /* KILabel */ = {
+			isa = PBXGroup;
+			children = (
+				6EF56C398D10541F5E07FCDAEAB0ED97 /* KILabel.h */,
+				6954D98FBD17E3E25518E5ECF842F755 /* KILabel.m */,
+				388BEE7D01E661134196BD768BB85E2F /* Support Files */,
+			);
+			name = KILabel;
+			path = KILabel;
+			sourceTree = "<group>";
+		};
+		FB9919C873019540CD6A927B2C9A6425 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CD989038F7426A40C502189A33DCD9D /* CHIPageControl */,
+				D970F2FC62242BC99A1887FF479F4E84 /* KILabel */,
+				46E94F5254CDD87E062690826FA7D691 /* PushwooshXCFramework */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		695CBA01F472E8E8F63083933FE29E06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8FA480A1D4C7AA4E232237425E5C800 /* Pods-CallDirectoryExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91CB9D633F10C079348E67C81B66CE69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8D055737543FFF666B4A892447EE2C /* KILabel.h in Headers */,
+				A0AFFBF69166CF034330F27E39C02C91 /* KILabel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F6B8998AFAA12082F605D1EFF8B369E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23B1CAE9CD81CB7AFF185A6D43E6FA5E /* Pods-Callerid-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD25F131C08DED34B8040E26DBA5C137 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433A6710833C2DBD4A38CA7D275BCD7B /* CHIPageControl-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AFB554D334AA6488AA1AD44C5EFC0F3 /* Pods-CallDirectoryExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34623BEA455181E4269658E542DB2475 /* Build configuration list for PBXNativeTarget "Pods-CallDirectoryExtension" */;
+			buildPhases = (
+				695CBA01F472E8E8F63083933FE29E06 /* Headers */,
+				708ED7DBA42AF84A46B86562E6A00960 /* Sources */,
+				B7402C98A2005164F7FDA4CDCE724206 /* Frameworks */,
+				B8034CA0B12EB7C3A2479F2CF8D028A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CallDirectoryExtension";
+			productName = Pods_CallDirectoryExtension;
+			productReference = EFB8F50D74C10ADDE3FBC673CC670470 /* Pods-CallDirectoryExtension */;
+			productType = "com.apple.product-type.framework";
+		};
+		4F3B30A88EC9B5AEE20F7590BBB949FF /* KILabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D545B8D0DEEBFCEED15337EA8F68029F /* Build configuration list for PBXNativeTarget "KILabel" */;
+			buildPhases = (
+				91CB9D633F10C079348E67C81B66CE69 /* Headers */,
+				F505CFB26A499538DAAE331486F4BA18 /* Sources */,
+				35F6E1A7A18990A535DCA5E145563746 /* Frameworks */,
+				7BBAAA70D02EDA360C86932F8CE90A14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KILabel;
+			productName = KILabel;
+			productReference = 5EC2A070332B0BE6AD1CA02ED9C54B70 /* KILabel */;
+			productType = "com.apple.product-type.framework";
+		};
+		58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BC932D4FF986BC000AD213A7DC51237 /* Build configuration list for PBXNativeTarget "CHIPageControl" */;
+			buildPhases = (
+				FD25F131C08DED34B8040E26DBA5C137 /* Headers */,
+				F81B59E94C388E40404B51D37604CE2C /* Sources */,
+				232D4431BA7474B4D99910CD4D41160B /* Frameworks */,
+				91EE15A77CB6CA51018F41041D9ECE82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHIPageControl;
+			productName = CHIPageControl;
+			productReference = 4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */;
+			productType = "com.apple.product-type.framework";
+		};
+		A3D307B9100253EE1CA3ADB259898706 /* Pods-Callerid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3891A14ACCC5192459EDB38B53550CF5 /* Build configuration list for PBXNativeTarget "Pods-Callerid" */;
+			buildPhases = (
+				9F6B8998AFAA12082F605D1EFF8B369E /* Headers */,
+				4911178B07CD0563C79AA24E91A62EBE /* Sources */,
+				F454C5699FB8E5EBFFDC44EE137F71F5 /* Frameworks */,
+				B82A941EE8E792101D2C3DE5BFE10F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21F6A6A84FC8F70AB107093C4E803796 /* PBXTargetDependency */,
+				43A663458A3DDEF54C3B76507E8C76D5 /* PBXTargetDependency */,
+				C209D49162A09D1905122B9B3064040B /* PBXTargetDependency */,
+			);
+			name = "Pods-Callerid";
+			productName = Pods_Callerid;
+			productReference = 53E84171357B21DD24A8139EEFD66434 /* Pods-Callerid */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B2B23D6BAAB00D3450C2B6D089B09805 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */,
+				4F3B30A88EC9B5AEE20F7590BBB949FF /* KILabel */,
+				0AFB554D334AA6488AA1AD44C5EFC0F3 /* Pods-CallDirectoryExtension */,
+				A3D307B9100253EE1CA3ADB259898706 /* Pods-Callerid */,
+				7B02E6EAC0B3A54BD069DBD5F9205870 /* PushwooshXCFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BBAAA70D02EDA360C86932F8CE90A14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91EE15A77CB6CA51018F41041D9ECE82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8034CA0B12EB7C3A2479F2CF8D028A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82A941EE8E792101D2C3DE5BFE10F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D989BEBD391BCD26D4EBD33E0D75449 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/PushwooshXCFramework/PushwooshXCFramework-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/PushwooshXCFramework/PushwooshXCFramework-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/PushwooshXCFramework/PushwooshXCFramework-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4911178B07CD0563C79AA24E91A62EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51423C0F356FAAB892695FC0136D393B /* Pods-Callerid-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708ED7DBA42AF84A46B86562E6A00960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6018F851ECC1748E9639DD8447D78C3 /* Pods-CallDirectoryExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F505CFB26A499538DAAE331486F4BA18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2CC8B8841A3D68E46BCA9DA67140B7 /* KILabel.m in Sources */,
+				D2F812A3BD06AAF6263FCB780C62527E /* KILabel-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81B59E94C388E40404B51D37604CE2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4330DF48C89DF0EBDD58AF4D09CB9A5D /* CHIBasePageControl.swift in Sources */,
+				F5827FDE12B6F0BE6053950661A0158F /* CHILayer.swift in Sources */,
+				63BA7A68438C185B1B6DA8CBC0FD3F0E /* CHIPageControl-dummy.m in Sources */,
+				1FE95DD9365B60DDE8F1107BEF0D3475 /* CHIPageControlJaloro.swift in Sources */,
+				0A504E1F264575DA2161C61F7A287A6B /* CHIPageControllable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21F6A6A84FC8F70AB107093C4E803796 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CHIPageControl;
+			target = 58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */;
+			targetProxy = 23B5A6B30F360195A52EC87C28BA1483 /* PBXContainerItemProxy */;
+		};
+		43A663458A3DDEF54C3B76507E8C76D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KILabel;
+			target = 4F3B30A88EC9B5AEE20F7590BBB949FF /* KILabel */;
+			targetProxy = 1120DC54947122F5DFA427CA9ED58687 /* PBXContainerItemProxy */;
+		};
+		C209D49162A09D1905122B9B3064040B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PushwooshXCFramework;
+			target = 7B02E6EAC0B3A54BD069DBD5F9205870 /* PushwooshXCFramework */;
+			targetProxy = 71B9F9F2FBC4A77859E65F7CFBAA646E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C2797AC464B9C8C97388B1D1CB7B41F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE159B05CAF581AA25739EECC3BFE809 /* KILabel.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KILabel/KILabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KILabel/KILabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KILabel/KILabel.modulemap";
+				PRODUCT_MODULE_NAME = KILabel;
+				PRODUCT_NAME = KILabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		27F6699AF3013C64E6750C0BBD10B63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870DDCB9ED0B3C489E919EF93A4AE9A3 /* Pods-Callerid.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Callerid/Pods-Callerid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Callerid/Pods-Callerid.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		460C67E941CA6A6E978B32B6B75B406C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F7873E58D41E46338AA94AFD82F756 /* KILabel.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KILabel/KILabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KILabel/KILabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KILabel/KILabel.modulemap";
+				PRODUCT_MODULE_NAME = KILabel;
+				PRODUCT_NAME = KILabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		48B62EAE9CEBE64D962187A71F3FF78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A49EAF4C5D35FEA5DFBB47012082CC /* Pods-CallDirectoryExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		771AE32A6367446161C6AADBA88E2D92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B274970F536336AD22D59FDBC6FB6B3 /* Pods-Callerid.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Callerid/Pods-Callerid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Callerid/Pods-Callerid.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E6444444C1894622EDD2DA618911D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF21F8E64D6BBC1729C1D16DE5613E70 /* PushwooshXCFramework.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		AA939BF82F8B0EA96CB332AA72A072F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54E472B52253D7CF63567DFF6245EFC3 /* CHIPageControl.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CHIPageControl/CHIPageControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CHIPageControl/CHIPageControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CHIPageControl/CHIPageControl.modulemap";
+				PRODUCT_MODULE_NAME = CHIPageControl;
+				PRODUCT_NAME = CHIPageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6E513B3402287706D6D349A547E41E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D33559FC10A61DE951A52F42A690344 /* CHIPageControl.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CHIPageControl/CHIPageControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CHIPageControl/CHIPageControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CHIPageControl/CHIPageControl.modulemap";
+				PRODUCT_MODULE_NAME = CHIPageControl;
+				PRODUCT_NAME = CHIPageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF66AE61C58A77EF6B88BF24C5E39974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21142DA3ED2FA0C1B842890219CADD22 /* PushwooshXCFramework.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4CE96E3E2AC565F30A15ADFD536C86C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05E7B3C0FC3EB13F98B3E8A90C64972C /* Pods-CallDirectoryExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BC932D4FF986BC000AD213A7DC51237 /* Build configuration list for PBXNativeTarget "CHIPageControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E513B3402287706D6D349A547E41E0 /* Debug */,
+				AA939BF82F8B0EA96CB332AA72A072F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34623BEA455181E4269658E542DB2475 /* Build configuration list for PBXNativeTarget "Pods-CallDirectoryExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4CE96E3E2AC565F30A15ADFD536C86C /* Debug */,
+				48B62EAE9CEBE64D962187A71F3FF78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3891A14ACCC5192459EDB38B53550CF5 /* Build configuration list for PBXNativeTarget "Pods-Callerid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				771AE32A6367446161C6AADBA88E2D92 /* Debug */,
+				27F6699AF3013C64E6750C0BBD10B63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D545B8D0DEEBFCEED15337EA8F68029F /* Build configuration list for PBXNativeTarget "KILabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				460C67E941CA6A6E978B32B6B75B406C /* Debug */,
+				1C2797AC464B9C8C97388B1D1CB7B41F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3DDAEA9DF0D20344EE857816CFEFF08 /* Build configuration list for PBXAggregateTarget "PushwooshXCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF66AE61C58A77EF6B88BF24C5E39974 /* Debug */,
+				7E6444444C1894622EDD2DA618911D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

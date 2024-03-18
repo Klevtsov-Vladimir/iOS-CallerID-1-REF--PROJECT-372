@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsPhonesController" customModule="Callerid" customModuleProvider="target">
+            <connections>
+                <outlet property="callsIdentTernView" destination="f8o-Uh-wry" id="lN2-RW-ZH2"/>
+                <outlet property="noResultsView" destination="nBw-fh-ldd" id="qNr-gQ-9iA"/>
+                <outlet property="tableView" destination="HUg-rO-B6t" id="g6O-EW-6UE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-My-h03">
+                    <rect key="frame" x="10" y="89" width="373" height="729"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8o-Uh-wry" customClass="CallsIndentTern" customModule="Callerid" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="80"/>
+                            <color key="backgroundColor" red="0.9840106368" green="0.94912236930000005" blue="0.94509679079999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="HO2-B4-ESa"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1G7-La-PsS">
+                            <rect key="frame" x="0.0" y="90" width="373" height="639"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBw-fh-ldd" customClass="NoResultsView" customModule="Callerid" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="373" height="150"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="VGW-g7-MLH"/>
+                                    </constraints>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-rO-B6t">
+                                    <rect key="frame" x="0.0" y="150" width="373" height="489"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="k9C-My-h03" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8Pt-ZL-aKx"/>
+                <constraint firstItem="k9C-My-h03" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="WRk-de-kaz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="k9C-My-h03" secondAttribute="bottom" id="qd7-om-jgb"/>
+                <constraint firstItem="k9C-My-h03" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="upK-HP-xeB"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

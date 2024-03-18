@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingController" customModule="Callerid" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonView" destination="cGw-bm-NU5" id="KQq-p5-lFS"/>
+                <outlet property="collectionView" destination="2L9-p1-eoY" id="jlY-K9-vsh"/>
+                <outlet property="pageControl" destination="JpB-Mq-DUN" id="1Gw-f8-bJ1"/>
+                <outlet property="textView" destination="rTh-xe-A0v" id="LNq-0D-oEV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-la-wZ6">
+                    <rect key="frame" x="20" y="83" width="280" height="177.5"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2L9-p1-eoY">
+                    <rect key="frame" x="20" y="290.5" width="280" height="80"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="IuW-l0-0J5"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ofc-B7-IEF">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGw-bm-NU5" customClass="MainButton" customModule="Callerid" customModuleProvider="target">
+                    <rect key="frame" x="20" y="406" width="280" height="54"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="x05-Yi-Tsj"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboardingName" translatesAutoresizingMaskIntoConstraints="NO" id="cq2-Ii-5EO">
+                    <rect key="frame" x="116.5" y="25" width="87" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="LdF-Jg-krw"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpB-Mq-DUN" customClass="CHIPageControlJaloro" customModule="CHIPageControl">
+                    <rect key="frame" x="20" y="378.5" width="280" height="14"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="Dc4-8D-hSQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="elementHeight">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="elementWidth">
+                            <real key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rTh-xe-A0v">
+                    <rect key="frame" x="20" y="468" width="280" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="4tw-WN-suN"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cq2-Ii-5EO" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="49b-LV-LCN"/>
+                <constraint firstItem="rTh-xe-A0v" firstAttribute="top" secondItem="cGw-bm-NU5" secondAttribute="bottom" constant="8" symbolic="YES" id="9Yo-qN-Eco"/>
+                <constraint firstItem="CHX-la-wZ6" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.312857" id="E3M-rT-Kb4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rTh-xe-A0v" secondAttribute="bottom" id="FC6-tg-yoq"/>
+                <constraint firstItem="2L9-p1-eoY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FD7-Gp-aOX"/>
+                <constraint firstItem="JpB-Mq-DUN" firstAttribute="leading" secondItem="2L9-p1-eoY" secondAttribute="leading" id="HHQ-WB-M1N"/>
+                <constraint firstItem="2L9-p1-eoY" firstAttribute="top" secondItem="CHX-la-wZ6" secondAttribute="bottom" constant="30" id="N62-vg-hHi"/>
+                <constraint firstItem="JpB-Mq-DUN" firstAttribute="centerX" secondItem="2L9-p1-eoY" secondAttribute="centerX" id="SNg-Kr-gMu"/>
+                <constraint firstItem="JpB-Mq-DUN" firstAttribute="top" secondItem="2L9-p1-eoY" secondAttribute="bottom" constant="8" symbolic="YES" id="TF9-go-SEz"/>
+                <constraint firstItem="cq2-Ii-5EO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="Uvl-Uh-Tho"/>
+                <constraint firstItem="CHX-la-wZ6" firstAttribute="top" secondItem="cq2-Ii-5EO" secondAttribute="bottom" constant="8" symbolic="YES" id="VHn-La-lmW"/>
+                <constraint firstItem="CHX-la-wZ6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ccV-6O-jc6"/>
+                <constraint firstItem="cGw-bm-NU5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eJA-Nm-yvZ"/>
+                <constraint firstItem="CHX-la-wZ6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ePz-mg-KDS"/>
+                <constraint firstItem="rTh-xe-A0v" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fXd-IQ-R1s"/>
+                <constraint firstItem="2L9-p1-eoY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hAw-hO-9fY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rTh-xe-A0v" secondAttribute="trailing" constant="20" id="wPK-eU-iyE"/>
+                <constraint firstItem="cGw-bm-NU5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zrJ-ax-F8l"/>
+            </constraints>
+            <point key="canvasLocation" x="139.13043478260872" y="19.419642857142858"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="JpB-Mq-DUN">
+            <size key="intrinsicContentSize" width="-9" height="4"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="imageOnboarding" width="335" height="353"/>
+        <image name="onboardingName" width="87" height="13"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

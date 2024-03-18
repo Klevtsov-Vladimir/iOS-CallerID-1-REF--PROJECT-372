@@ -1,0 +1,26 @@
+PODS:
+  - CHIPageControl/Jaloro (0.2)
+  - KILabel (1.0.0)
+  - PushwooshXCFramework (6.5.3):
+    - PushwooshXCFramework/Core (= 6.5.3)
+  - PushwooshXCFramework/Core (6.5.3)
+
+DEPENDENCIES:
+  - CHIPageControl/Jaloro
+  - KILabel (= 1.0.0)
+  - PushwooshXCFramework
+
+SPEC REPOS:
+  trunk:
+    - CHIPageControl
+    - KILabel
+    - PushwooshXCFramework
+
+SPEC CHECKSUMS:
+  CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
+  KILabel: 84049969642d4ac1061ebe38ad4c0da37fed108b
+  PushwooshXCFramework: df21b70c28a93196c66c155fefa92789c0bd5e5d
+
+PODFILE CHECKSUM: d40ab27705e0b2b95df6ec6184fd762e690159c1
+
+COCOAPODS: 1.11.3

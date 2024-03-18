@@ -1,0 +1,242 @@
+"onboardingTitle1" = "Protect yourself\nfrom spam";
+"onboardingTitle2" = "Know who is calling\nbefore you answer";
+"onboardingTitle3" = "Search millions of\nnumbers worldwide";
+"onboardingTerms" = "By clicking \"Get started\" if you reside in the EU, EEA or Switzerland you accept the Terms of Service and if you reside in any other country you accept the Terms of Service and Privacy policy";
+"next" = "Next";
+"terms" = "Terms of Service";
+"privacy" = "Privacy policy";
+"getStarted" = "GET STARTED";
+"blockBanR" = "Number removed from your block list";
+
+"protect" = "Protect";
+
+"onbTerms1" = "By clicking \"Get started\" if you reside in the EU, EEA or Switzerland you accept the ";
+"onbterms3" = " and if you reside in any other country you accept the ";
+"onbterms4" = " and ";
+
+"onbSetSub" = "Call identification not enabled";
+"maybeLater" = "Maybe later";
+
+"onbSetCollectionTitle" = "Open iPhone Settings";
+"onbSetCollectionTitle2" = "Tap on Phone";
+"onbSetCollectionTitle3" = "Tap on Call blocking & identification";
+"onbSetCollectionTitle4" = "Turn on all our switches";
+"onbSetCollectionTitle5" = "Return to CallerId";
+"blockBan" = "Number added to your block list";
+"blockBanR" = "Number removed from your block list";
+
+"openSettings" = "Open settings";
+
+"callIdentTitleAlert" = "Caller id won`t work without this";
+"callIdentMessageAlert" = "Please try again to turn on all switches to identify spam & other calls";
+
+"notNow" = "Not now";
+"tryAgain" = "Try again";
+
+"callIdentTitle" = "Call identification enabled";
+"callIdentSubtitle" = "Now that all switches are turned on, CallerId can identify when spammers or verified businesses call you.";
+"continue" = "Continue";
+
+"verifyTitle" = "Enter your phone number";
+"verifySubtitle" = "CallerId will send you a one-time password via SMS to verify your number";
+
+"phoneNumPlaceholder" = "Your phone number";
+
+"close" = "Close";
+"selectCountry" = "Choose your country";
+
+"verifyTitleAlert" = "Is this your correct phone number?";
+
+"confirm" = "Confirm";
+"cancel" = "Cancel";
+
+"enterotp" = "Enter OTP";
+"otpSubtitle" = "CallerId will send you a one-time password via SMS to verify your number";
+
+"createProfile" = "Create profile";
+"createProfileSubtitle" = "Your name and profile picture will be used for called ID and profile details";
+
+"addPicture" = "Add a profile picture";
+
+"chooseGallery" = "Choose from gallery";
+"makePhoto" = "Make photo";
+
+"trackingAdsTitle" = "More choices for relevant ads";
+"trackingAdsSub" = "Get ads that are more personalized";
+"trackingAdsSub1" = "Help businesses to reach customers";
+"trackingAdsDescription" = "\"Allow\" tracking to see personalized ads on CallerId. You can always change this in your device settings.";
+"choose" = "Choose";
+
+"notificTitleImag" = "Call from John Doe Identified by CallerId";
+"notificTitle" = "Enavle Call Alerts";
+"notificSubtitle" = "Turn on all alert notifications to improve your call identification experience.";
+"turnOn" = "Turn On";
+
+"welcome" = "Welcome";
+
+"turnOn" = "Turn On";
+"turnOnTitle" = "Caller ID is turned off";
+"turnOnSubtitle" = "Please turn on all switches in settings";
+
+"noResTitle" = "No recent search results";
+"searchNum" = "Search any number";
+"search" = "Search";
+
+"call" = "Call";
+"message" = "Message";
+"block" = "Block";
+"unblock" = "Unblock";
+
+"callDetailTitle" = "Identified by CallerId";
+"funcSave" = "Save to contacts";
+"funcName" = "Suggest a better name";
+"funcWeb" = "Search on web";
+"funcShare" = "Share contact ";
+
+"address" = "Address";
+
+"betterNameTitle" = "Suggest a better name";
+"business" = "Business";
+"person" = "Person";
+"save" = "Save";
+
+"spamTitleEnabled" = "Call identification is enabled";
+"blockList" = "Block list";
+"subSpam" = "Manage blocked numbers";
+
+"more" = "More";
+"profile" = "Profile";
+"settings" = "Settings";
+"support" = "Support";
+"privacyCenter" = "Privacy center";
+"chooseLang" = "Change language";
+"faq" = "FAQ";
+"contactUs" = "Contact Us";
+"writeRev" = "Write a review";
+"about" = "About";
+"edit" = "Edit";
+
+"firstName" = "First name";
+"lastName" = "Last name";
+"email" = "Email";
+"gender" = "Gender";
+"phoneNum" = "Phone number";
+"website" = "Website";
+"jobTitle" = "Job title";
+"company" = "Company";
+"street" = "Street";
+"zipCode" = "ZIP code";
+"city" = "City";
+"country" = "Country";
+
+"genderP" = "Prefer not to say";
+"websiteP" = "Add website";
+"jobTitleP" = "Add title job";
+"companyP" = "Add company";
+"streetP" = "Add street";
+"zipCodeP" = "Add ZIP code";
+"cityP" = "Add city";
+
+"privacyAds" = "Manage ads";
+"privacyData" = "Manage my data";
+"privacyAccount" = "Deactivate account";
+
+"restifyData" = "Rectify my data";
+"downloadData" = "Download my data";
+
+"male" = "Male";
+"female" = "Female";
+
+"info" = "Information";
+"followUs" = "Follow us";
+"callerId" = "CallerId";
+"help" = "Help";
+
+"insta" = "Instagram";
+"twitter" = "Twitter";
+"facebook" = "Facebook";
+"youtube" = "YouTube";
+"blog" = "Blog";
+"version" = "Version";
+
+"blockReport" = "Block & Report";
+"personal" = "Personal";
+"businnesTitle" = "Was this a business or a personal number?";
+"blockTitleName" = "Suggest a better name";
+"blockPlaceholderName" = "Suggest name";
+"blockButtonSubtitle" = "If there is any additional data that you think is incorrect, please contact";
+
+"searchAlert" = "What do you want to search?";
+"name" = "Name";
+
+"subPri" = "Do not inform others when i view their profile";
+"subPri1" = "Changes may take some time to be applied";
+
+"protectTitle" = "Spam list outdated!";
+"protectSub" = "There are new spammers in your area since your last manual update. Get the updated list now to identify spam calls quickly.";
+
+"protectButTit" = "Update now";
+"premium" = "Premium";
+"premiumTitleSub" = "Who viewed  my profile";
+"premiumSub" = "Get automatic spam protection!";
+"premiumDescr" = "Get the latest spam list automatically and saty protected from unwanted calls all the the time";
+"buyNow" = "Buy now";
+"forMonth" = "/month";
+"spamTitle" = "Spam protection";
+"spamLive" = "Live Caller ID";
+"callAlert" = "Call Alert";
+"incMode" = "Incognito mode";
+"incSub" = "View profiles privately";
+
+"on" = "On";
+"off" = "Off";
+
+//MARK: - Purchase
+"TermsID"="شروط الاستخدام";
+"PrivacyID"="سياسة الخصوصية";
+"SliderID1"="احصل على موقع درع الموت الناري";
+/**/
+"SliderID2"="إكتشف 5 قدرات من سيج وغابة كورك";
+/**/
+"SliderID3"="جميع الكهوف والآبار على الخريطة";
+/**/
+"SliderID4"="احصل على موقع درع الموت الناري";
+/**/
+"SliderID5"="اجمع كل مجموعات الدروع حسب المواقع";
+
+"iOSAfterID" = "* يتم تجديد هذه النسخة التجريبية تلقائيًا إلى اشتراك مدفوع وستستمر في التجديد تلقائيًا حتى تقوم بالإلغاء. * يجب أن تكون مشتركًا لاستخدام هذا التطبيق. لا يوجد محتوى مجاني. * سيتم تحميل مدفوعات الاشتراك على حساب iTunes الخاص بك عند تأكيد عملية الشراء. * سيتم تجديد الاشتراكات تلقائيًا وسيتم تحميل الدفع على حساب iTunes الخاص بك ما لم يتم إيقاف التجديد التلقائي قبل 24 ساعة على الأقل من نهاية الفترة الحالية. تعتمد تكلفة التجديد على خطة الاشتراك الخاصة بك. خطط الاشتراك القياسية لدينا هي: * اشتراك لمدة أسبوع واحد";
+
+"iOSAfterID1" = "بالنسبة للعملات الأخرى، يتوافق السعر مع نفس مستوى السعر في مصفوفة تسعير متجر التطبيقات. * سيتم تجديد الاشتراك مع فترة تجريبية مجانية تلقائيًا إلى اشتراك مدفوع. يمكنك إلغاء أو إدارة التجديد التلقائي للنسخة التجريبية المجانية في إعدادات حسابك بعد الشراء. سيصبح الإلغاء ساري المفعول بعد 24 ساعة من اليوم الأخير من فترة الاشتراك الحالية وسيتم تخفيضك إلى الخدمة المجانية. * يرجى ملاحظة: سيتم مصادرة أي جزء غير مستخدم من فترة تجريبية مجانية مدتها 3 أيام (إذا تم عرضها) عند شراء اشتراك مميز خلال الفترة التجريبية المجانية. من فضلك، لمزيد من المعلومات راجع سياسة الخصوصية وشروط الاستخدام الخاصة بنا.";
+
+
+"iOSButtonID"="يكمل";
+"LoadingID"="تحميل";
+
+"TextTitle1ID"="اختر مجموعة دروعك";
+
+/**/
+"TextTitle2ID"="اختر القدرة المطلوبة";
+
+/**/
+"Text1ID"="قدرة أميبو";
+
+/**/
+"Text2ID"="قدرة الصمامات";
+
+/**/
+"Text3ID"="القدرة على الصعود";
+
+/**/
+"Text4ID"="استدعاء القدرة";
+
+/**/
+"Text5ID"="قدرة الكاميرا";
+
+/**/
+
+"ConnectivityTitle"="مشكلة الاتصال";
+"ConnectivityDescription"="يبدو أن اتصال الإنترنت غير متصل بالإنترنت ☹️";
+
+
+"restore"="يعيد";
+

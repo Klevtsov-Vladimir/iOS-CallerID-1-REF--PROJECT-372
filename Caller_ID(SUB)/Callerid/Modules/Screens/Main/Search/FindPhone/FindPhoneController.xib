@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindPhoneController" customModule="Callerid" customModuleProvider="target">
+            <connections>
+                <outlet property="noResultsView" destination="Wgb-Hw-ZUe" id="tDt-GY-tu4"/>
+                <outlet property="searchView" destination="sGP-Zf-E2h" id="woj-9W-hdB"/>
+                <outlet property="tableView" destination="6dQ-Q3-TGj" id="nqj-Dp-RcZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGP-Zf-E2h" customClass="SearchView" customModule="Callerid" customModuleProvider="target">
+                    <rect key="frame" x="20" y="79" width="353" height="54"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="lWv-WQ-rra"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-UT-yFZ">
+                    <rect key="frame" x="10" y="153" width="373" height="665"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-Hw-ZUe" customClass="NoResultsView" customModule="Callerid" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="168"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="168" id="Aau-Pd-xt1"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6dQ-Q3-TGj">
+                            <rect key="frame" x="0.0" y="168" width="373" height="497"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sGP-Zf-E2h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3yf-Ia-OFx"/>
+                <constraint firstItem="RzH-UT-yFZ" firstAttribute="top" secondItem="sGP-Zf-E2h" secondAttribute="bottom" constant="20" id="Asd-9R-Jg5"/>
+                <constraint firstItem="sGP-Zf-E2h" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="I9A-KV-Rhq"/>
+                <constraint firstItem="RzH-UT-yFZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="UuV-8J-yJX"/>
+                <constraint firstItem="sGP-Zf-E2h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="YC4-IO-YbM"/>
+                <constraint firstItem="RzH-UT-yFZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fsy-2H-4eB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RzH-UT-yFZ" secondAttribute="bottom" id="xSt-cU-TYl"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,252 @@
+"onboardingTitle1" = "Protect yourself\nfrom spam";
+"onboardingTitle2" = "Know who is calling\nbefore you answer";
+"onboardingTitle3" = "Search millions of\nnumbers worldwide";
+"onboardingTerms" = "By clicking \"Get started\" if you reside in the EU, EEA or Switzerland you accept the Terms of Service and if you reside in any other country you accept the Terms of Service and Privacy policy";
+"next" = "Next";
+"terms" = "Terms of Service";
+"privacy" = "Privacy policy";
+"getStarted" = "GET STARTED";
+
+"protect" = "Protect";
+
+"onbTerms1" = "By clicking \"Get started\" if you reside in the EU, EEA or Switzerland you accept the ";
+"onbterms3" = " and if you reside in any other country you accept the ";
+"onbterms4" = " and ";
+
+"onbSetSub" = "Call identification not enabled";
+"maybeLater" = "Maybe later";
+
+"onbSetCollectionTitle" = "Open iPhone Settings";
+"onbSetCollectionTitle2" = "Tap on Phone";
+"onbSetCollectionTitle3" = "Tap on Call blocking & identification";
+"onbSetCollectionTitle4" = "Turn on all our switches";
+"onbSetCollectionTitle5" = "Return to CallerId";
+
+"openSettings" = "Open settings";
+
+"callIdentTitleAlert" = "Caller id won`t work without this";
+"callIdentMessageAlert" = "Please try again to turn on all switches to identify spam & other calls";
+
+"notNow" = "Not now";
+"tryAgain" = "Try again";
+
+"callIdentTitle" = "Call identification enabled";
+"callIdentSubtitle" = "Now that all switches are turned on, CallerId can identify when spammers or verified businesses call you.";
+"continue" = "Continue";
+
+"verifyTitle" = "Enter your phone number";
+"verifySubtitle" = "CallerId will send you a one-time password via SMS to verify your number";
+
+"phoneNumPlaceholder" = "Your phone number";
+
+"close" = "Close";
+"selectCountry" = "Choose your country";
+
+"verifyTitleAlert" = "Is this your correct phone number?";
+
+"confirm" = "Confirm";
+"cancel" = "Cancel";
+
+"enterotp" = "Enter OTP";
+"otpSubtitle" = "CallerId will send you a one-time password via SMS to verify your number";
+
+"createProfile" = "Create profile";
+"createProfileSubtitle" = "Your name and profile picture will be used for called ID and profile details";
+
+"addPicture" = "Add a profile picture";
+
+"chooseGallery" = "Choose from gallery";
+"makePhoto" = "Make photo";
+
+"trackingAdsTitle" = "More choices for relevant ads";
+"trackingAdsSub" = "Get ads that are more personalized";
+"trackingAdsSub1" = "Help businesses to reach customers";
+"trackingAdsDescription" = "\"Allow\" tracking to see personalized ads on CallerId. You can always change this in your device settings.";
+"choose" = "Choose";
+
+"notificTitleImag" = "Call from John Doe Identified by CallerId";
+"notificTitle" = "Enable Call Alerts";
+"notificSubtitle" = "Turn on all alert notifications to improve your call identification experience.";
+"turnOn" = "Turn On";
+"blockBanR" = "Number removed from your block list";
+
+"welcome" = "Welcome";
+
+"turnOn" = "Turn On";
+"turnOnTitle" = "Caller ID is turned off";
+"turnOnSubtitle" = "Please turn on all switches in settings";
+
+"noResTitle" = "No recent search results";
+"searchNum" = "Search any number";
+"search" = "Search";
+
+"call" = "Call";
+"message" = "Message";
+"block" = "Block";
+"unblock" = "Unblock";
+
+"callDetailTitle" = "Identified by CallerId";
+"funcSave" = "Save to contacts";
+"funcName" = "Suggest a better name";
+"funcWeb" = "Search on web";
+"funcShare" = "Share contact ";
+
+"address" = "Address";
+
+"betterNameTitle" = "Suggest a better name";
+"business" = "Business";
+"person" = "Person";
+"save" = "Save";
+
+"spamTitleEnabled" = "Call identification is enabled";
+"blockList" = "Block list";
+"subSpam" = "Manage blocked numbers";
+
+"more" = "More";
+"profile" = "Profile";
+"settings" = "Settings";
+"support" = "Support";
+"privacyCenter" = "Privacy center";
+"chooseLang" = "Change language";
+"faq" = "FAQ";
+"contactUs" = "Contact Us";
+"writeRev" = "Write a review";
+"about" = "About";
+"edit" = "Edit";
+
+"firstName" = "First name";
+"lastName" = "Last name";
+"email" = "Email";
+"gender" = "Gender";
+"phoneNum" = "Phone number";
+"website" = "Website";
+"jobTitle" = "Job title";
+"company" = "Company";
+"street" = "Street";
+"zipCode" = "ZIP code";
+"city" = "City";
+"country" = "Country";
+"blockBan" = "Number added to your block list";
+"blockBanR" = "Number removed from your block list";
+
+"genderP" = "Prefer not to say";
+"websiteP" = "Add website";
+"jobTitleP" = "Add title job";
+"companyP" = "Add company";
+"streetP" = "Add street";
+"zipCodeP" = "Add ZIP code";
+"cityP" = "Add city";
+
+"privacyAds" = "Manage ads";
+"privacyData" = "Manage my data";
+"privacyAccount" = "Deactivate account";
+
+"restifyData" = "Rectify my data";
+"downloadData" = "Download my data";
+
+"male" = "Male";
+"female" = "Female";
+
+"info" = "Information";
+"followUs" = "Follow us";
+"callerId" = "CallerId";
+"help" = "Help";
+
+"insta" = "Instagram";
+"twitter" = "Twitter";
+"facebook" = "Facebook";
+"youtube" = "YouTube";
+"blog" = "Blog";
+"version" = "Version";
+
+"blockReport" = "Block & Report";
+"personal" = "Personal";
+"businnesTitle" = "Was this a business or a personal number?";
+"blockTitleName" = "Suggest a better name";
+"blockPlaceholderName" = "Suggest name";
+"blockButtonSubtitle" = "If there is any additional data that you think is incorrect, please contact";
+
+"searchAlert" = "What do you want to search?";
+"name" = "Name";
+
+"subPri" = "Do not inform others when i view their profile";
+"subPri1" = "Changes may take some time to be applied";
+
+"protectTitle" = "Spam list outdated!";
+"protectSub" = "There are new spammers in your area since your last manual update. Get the updated list now to identify spam calls quickly.";
+
+"protectButTit" = "Update now";
+"premium" = "Premium";
+"premiumTitleSub" = "Who viewed  my profile";
+"premiumSub" = "Get automatic spam protection!";
+"premiumDescr" = "Get the latest spam list automatically and saty protected from unwanted calls all the the time";
+"buyNow" = "Buy now";
+"forMonth" = "/month";
+"spamTitle" = "Spam protection";
+"spamLive" = "Live Caller ID";
+"callAlert" = "Call Alert";
+"incMode" = "Incognito mode";
+"incSub" = "View profiles privately";
+
+"on" = "On";
+"off" = "Off";
+
+//MARK: - Purchase
+"TermsID" = "Terms of Use";
+"PrivacyID" = "Privacy Policy";
+"SliderID1" = "TEXT TEXT TEXT TEXT \nTEXT TEXT TEXT TEXT ";
+/**/
+"SliderID2" = "TEXT TEXT TEXT TEXT TEXT TEXT";
+/**/
+"SliderID3" = "TEXT TEXT TEXT TEXT TEXT TEXT";
+/**/
+"SliderID4" = "TEXT TEXT TEXT TEXT TEXT TEXT";
+/**/
+"SliderID5" = "COLLECT ALL ARMOR SETS BY LOCATIONS";
+
+
+"iOSAfterID" = "* This trial automatically renews into a paid subscription and will continue to automatically renew until you cancel. * You need to be subscribed to use this app. No free content. * Subscription payments will be charged to your iTunes account at confirmation of your purchase. * Subscriptions will automatically renew and payment will be charged to your iTunes account unless auto-renew is turned off at least 24 hours prior to the end of the current period. The cost of the renewal depends on your Subscription Plan. Our standard Subscription Plans are: * 1-week Subscription";
+
+"iOSAfterID1" = "For other currencies, the price corresponds to the same price tier on the App Store Pricing Matrix. * Subscription with a free trial period will automatically renew to a paid subscription. You can cancel or manage your free trial’s auto-renewal in your Account Settings after purchase. The cancellation will take effect 24-hours after the last day of the current subscription period and you will be downgraded to the free service. * Please note: any unused portion of a free trial period of 3 days(if offered) will be forfeited when you purchase a premium subscription during the free trial period. Please, for more information see our Privacy Policy and Terms of Use.";
+
+
+"iOSButtonID" = "CONTINUE";
+"LoadingID" = "LOADING";
+
+"TextTitle1ID" = "TEXT TEXT TEXT TEXT TEXT TEXT TEXT";
+
+/**/
+"TextTitle2ID" = "TEXT TEXT TEXT TEXT TEXT TEXT TEXT";
+
+/**/
+"Text1ID" = "Card Name";
+
+/**/
+"Text2ID" = "Card Name";
+
+/**/
+"Text3ID" = "Card Name";
+
+/**/
+"Text4ID" = "Card Name";
+
+/**/
+"Text5ID" = "Card Name";
+
+/**/
+
+"ConnectivityTitle" = "Connectivity Issue";
+"ConnectivityDescription" = "Internet connection appears to be offline ☹️";
+
+
+"restore" = "Restore";
+
+
+"p1Label" = "TEXT TEXT TEXT TEXT TEXT TEXT";
+"p2Label" = "TEXT TEXT TEXT TEXT TEXT TEXT";
+"p3Label" = "TEXT TEXT TEXT TEXT TEXT TEXT";
+
+"p1SLabel" = "text text text text text text text";
+"p2SLabel" = "text text text text text text text";
+"p3SLabel" = "text text text text text text text";
+

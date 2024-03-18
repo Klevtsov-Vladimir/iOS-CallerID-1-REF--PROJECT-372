@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Callerid/Pods-Callerid-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework
+${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/PushwooshXCFramework/Core/Pushwoosh.framework/Pushwoosh
