@@ -55,9 +55,9 @@ class LoaderController: UIViewController {
         view.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
     func setUpPrLabels() {
-        percentageLabel.font = UIFont(name: "Manrope", size: 30)
+        percentageLabel.font = UIFont(name: "Manrope-SemiBold", size: 30)
         noConLabel.text = "noConnection".localized()
-        noConLabel.font = UIFont(name: "Manrope-Medium", size: 20)
+        noConLabel.font = UIFont(name: "Manrope-SemiBold", size: 20)
         noConLabel.textColor = .white
         noConLabel.isHidden = true
         okeyButton.isHidden = true
@@ -65,6 +65,10 @@ class LoaderController: UIViewController {
     func setUpButton() {
         okeyButton.layer.cornerRadius = 32
         okeyButton.setTitleColor(.black, for: .normal)
+        okeyButton.addShadow(shadowColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor,
+                         shadowOffset: CGSize(width: 0, height: 0),
+                         shadowRadius: 9.1,
+                         shadowOpacity: 0.5)
     }
     func isInternetAvailable() {
         let reachability = try! Reachability()

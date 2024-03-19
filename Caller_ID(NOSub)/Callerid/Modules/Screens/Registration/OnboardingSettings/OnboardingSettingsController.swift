@@ -11,8 +11,15 @@ final class OnboardingSettingsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setup()
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
     }
 }
 
@@ -23,58 +30,77 @@ private extension OnboardingSettingsController {
     }
     
     func checkStatusExtension(status: CXCallDirectoryManager.EnabledStatus? = nil) {
-//        isShowAlert = false
+        //        isShowAlert = false
         if let status = status {
             getStatus(status: status)
         } else {
             CallDirectoryManagerUtils.getEnabledStatusForExtension { status in
-                getStatus(status: status)
-            }
-        }
-        
-        func getStatus(status: CXCallDirectoryManager.EnabledStatus) {
-            switch status {
-            case .enabled:
                 DispatchQueue.main.async {
-                    let controller = CallIdentifierController()
-                    self.navigationController?.pushViewController(controller, animated: true)
-                    NotificationCenter.default.removeObserver(self)
-                }
-            default:
-                let alert = UIAlertController(title: "callIdentTitleAlert".localized(), message: "callIdentMessageAlert".localized(), preferredStyle: .alert)
-                let notNowAlertAction = UIAlertAction(title: "notNow".localized(), style: .destructive) { action in
-                    let controller = PhoneVerifyController()
-                    self.navigationController?.pushViewController(controller, animated: true)
-                    NotificationCenter.default.removeObserver(self)
-                }
-                let tryAgainAlertAction = UIAlertAction(title: "tryAgain".localized(), style: .default) { action in
-                    self.openSettings()
-                }
-                
-                
-                alert.addAction(notNowAlertAction)
-                alert.addAction(tryAgainAlertAction)
-                
-                if let popoverController = alert.popoverPresentationController {
-                    popoverController.sourceView = self.view
-                    popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-                    popoverController.permittedArrowDirections = []
-                }
-                
-                DispatchQueue.main.async {
-                    self.present(alert, animated: true)
+                    self.getStatus(status: status)
                 }
             }
         }
     }
     
+    func getStatus(status: CXCallDirectoryManager.EnabledStatus) {
+        switch status {
+        case .enabled:
+            DispatchQueue.main.async {
+                let controller = CallIdentifierController()
+                self.navigationController?.pushViewController(controller, animated: true)
+                NotificationCenter.default.removeObserver(self)
+            }
+        default:
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            
+            let notNowAlertAction = UIAlertAction(title: "notNow".localized(), style: .destructive) { action in
+                let controller = PhoneVerifyController()
+                self.navigationController?.pushViewController(controller, animated: true)
+                NotificationCenter.default.removeObserver(self)
+            }
+            let tryAgainAlertAction = UIAlertAction(title: "tryAgain".localized(), style: .default) { action in
+                self.openSettings()
+            }
+            notNowAlertAction.setValue(UIColor(named: "textRed"), forKey: "titleTextColor")
+
+            let attributedString = NSAttributedString(string: "callIdentTitleAlert".localized(), attributes: [
+                NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: .semibold),
+                    NSAttributedString.Key.foregroundColor : UIColor(.white)
+                    ])
+            let attributedStringMessege = NSAttributedString(string: "callIdentMessageAlert".localized(), attributes: [
+                NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13, weight: .regular),
+                    NSAttributedString.Key.foregroundColor : UIColor(.white)
+                    ])
+            alert.setValue(attributedString, forKey: "attributedTitle")
+            alert.setValue(attributedStringMessege, forKey: "attributedMessage")
+
+            alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor(named: "AlertBG")
+            alert.view.tintColor = UIColor(named: "textBlue")
+            
+            alert.addAction(notNowAlertAction)
+            alert.addAction(tryAgainAlertAction)
+            
+            if let popoverController = alert.popoverPresentationController {
+                popoverController.sourceView = self.view
+                popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+                popoverController.permittedArrowDirections = []
+            }
+            
+            DispatchQueue.main.async {
+                self.present(alert, animated: true)
+            }
+        }
+    }
+    
     func openSettings() {
-        isShowAlert = true
-        CXCallDirectoryManager.sharedInstance.openSettings { error in
-            print(error)
+        DispatchQueue.main.async {
+            CXCallDirectoryManager.sharedInstance.openSettings { error in
+                print(error)
+            }
         }
     }
 }
+
 
 //MARK: - Actions
 private extension OnboardingSettingsController {
@@ -129,12 +155,11 @@ private extension OnboardingSettingsController {
                 }
             }
         }
-        subtitleLabel.font = .systemFont(ofSize: 18, weight: .medium)
-        subtitleLabel.textColor = .black
+        subtitleLabel.font = UIFont(name: "Manrope-Bold", size: 20)
+        subtitleLabel.textColor = .white
         
         laterButton.setTitle("maybeLater".localized(), for: .normal)
-        laterButton.setTitleColor(.init(red: 105/255, green: 137/255, blue: 254/255, alpha: 1), for: .normal)
-        laterButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        laterButton.titleLabel?.font = UIFont(name: "Manrope-Medium", size: 16)
         laterButton.backgroundColor = .clear
         
         settingsView.setTitleText("openSettings".localized())
@@ -153,6 +178,7 @@ private extension OnboardingSettingsController {
     }
     
     func setupCollection() {
+        collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "OnboardingSettingsCell", bundle: nil), forCellWithReuseIdentifier: "OnboardingSettingsCell")
@@ -179,11 +205,11 @@ enum RowsSpam: Int, CaseIterable {
     
     var image: UIImage {
         switch self {
-        case .openPhone: return #imageLiteral(resourceName: "settings")
-        case .tapPhone: return #imageLiteral(resourceName: "phone")
-        case .tapCall: return #imageLiteral(resourceName: "arrowOnb")
-        case .turnOn: return #imageLiteral(resourceName: "toggle")
-        case .returnTo: return #imageLiteral(resourceName: "phone2")
+        case .openPhone: return #imageLiteral(resourceName: "Name=Settings").withTintColor(.white)
+        case .tapPhone: return #imageLiteral(resourceName: "call").withTintColor(.white)
+        case .tapCall: return #imageLiteral(resourceName: "arrow-square-right").withTintColor(.white)
+        case .turnOn: return #imageLiteral(resourceName: "Name=Switch").withTintColor(.white)
+        case .returnTo: return #imageLiteral(resourceName: "call").withTintColor(UIColor(named: "PurpleButton") ?? .purple)
         }
     }
 }

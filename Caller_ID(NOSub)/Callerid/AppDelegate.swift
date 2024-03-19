@@ -75,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func openMainApp() -> UIViewController {
         if (UserDefaults.standard.string(forKey: "phone")?.isEmpty ?? false) || UserDefaults.standard.string(forKey: "phone")?.isEmpty == nil {
-            return OnboardingController()
+            return OnboardingSettingsController()
         } else {
             if UserDefaults.standard.bool(forKey: "isSetProfileInfo") {
                 return TabBarController()
@@ -92,11 +92,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        //        if isShowAlert {
         NotificationCenter.default.post(name: NSNotification.Name("updateTurnOnView"), object: nil)
         NotificationCenter.default.post(name: NSNotification.Name("checkCallIdentifier"), object: nil)
-        //            isShowAlert = false
-        //        }
+     
         
         CallDirectoryManagerUtils.getEnabledStatusForExtension { status in
             switch status {
@@ -110,10 +108,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startPurVideo"), object: nil)
         
     }
-    
-    //    func applicationWillResignActive(_ application: UIApplication) {
-    //        print("dds")
-    //    }
     
     func setupNotifications() {
         // Get the default notification center instance.

@@ -18,6 +18,13 @@ final class PhoneVerifyController: UIViewController {
         
         setup()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
@@ -30,31 +37,31 @@ final class PhoneVerifyController: UIViewController {
 }
 
 //MARK: - Private methods
-private extension PhoneVerifyController {
-    @objc func keyboardWillShow(notification: NSNotification) {
-        let model = UIDevice.model
-        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
-        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
-        if let keyboardSize = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue, self.continueButtonBottomConstraint.constant == 10 {
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                self.continueButtonBottomConstraint.constant += keyboardSize.height + 60
-            } else {
-                self.continueButtonBottomConstraint.constant += keyboardSize.height + 35
-            }
-            view.layoutIfNeeded()
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        let model = UIDevice.model
-        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
-        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
-        if let _ = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue {
-            self.continueButtonBottomConstraint.constant = 10
-            view.layoutIfNeeded()
-        }
-    }
-}
+//private extension PhoneVerifyController {
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        let model = UIDevice.model
+//        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
+//        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
+//        if let keyboardSize = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue, self.continueButtonBottomConstraint.constant == 10 {
+//            if UIDevice.current.userInterfaceIdiom == .pad {
+//                self.continueButtonBottomConstraint.constant += keyboardSize.height + 60
+//            } else {
+//                self.continueButtonBottomConstraint.constant += keyboardSize.height + 35
+//            }
+//            view.layoutIfNeeded()
+//        }
+//    }
+//    
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        let model = UIDevice.model
+//        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
+//        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
+//        if let _ = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue {
+//            self.continueButtonBottomConstraint.constant = 10
+//            view.layoutIfNeeded()
+//        }
+//    }
+//}
 
 //MARK: - UITableViewDelegate
 extension PhoneVerifyController: UITableViewDelegate {
@@ -75,7 +82,7 @@ extension PhoneVerifyController: UITableViewDataSource {
         
         switch row {
         case .country:
-            cell.phoneView.setTitleText("country".localized())
+            //cell.phoneView.setTitleText("country".localized())
             
             if !countries.isEmpty {
                 cell.phoneView.isHiddenImage(isHidden: false)
@@ -91,7 +98,7 @@ extension PhoneVerifyController: UITableViewDataSource {
             cell.phoneView.isHiddenImage(isHidden: true)
             cell.phoneView.isHiddenLabel(isHidden: true)
             cell.phoneView.isHiddenTextField(isHidden: false)
-            cell.phoneView.setTitleText("phoneNum".localized())
+            //cell.phoneView.setTitleText("phoneNum".localized())
             cell.phoneView.setPlaceholder("phoneNumPlaceholder".localized())
             cell.phoneView.textField.keyboardType = .numberPad
             cell.phoneView.textField.autocorrectionType = .no
@@ -147,12 +154,12 @@ private extension PhoneVerifyController {
         
         titleLabel.text = "verifyTitle".localized()
         
-        titleLabel.textColor = .black
-        titleLabel.font = .systemFont(ofSize: 18, weight: .medium)
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont(name: "Manrope-Bold", size: 20)
         
         subtitleLabel.text = "verifySubtitle".localized()
-        subtitleLabel.textColor = .black
-        subtitleLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        subtitleLabel.textColor = .white
+        subtitleLabel.font = UIFont(name: "Manrope-Medium", size: 16)
         
         continueView.setTitleText("continue".localized())
         continueView.callback = { [weak self] in
@@ -234,9 +241,9 @@ private extension PhoneVerifyController {
     }
     
     func setupObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 

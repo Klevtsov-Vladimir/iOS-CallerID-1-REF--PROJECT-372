@@ -62,7 +62,7 @@ extension PrivacyCenterController: UITableViewDataSource {
                 let alert = UIAlertController(title: "privacyAccount".localized(), message: nil, preferredStyle: .actionSheet)
                 
                 let confirmAction = UIAlertAction(title: "confirm".localized(), style: .default) { _ in
-                    AppDelegate.shared.setRootViewController(OnboardingController())
+                    AppDelegate.shared.setRootViewController(OnboardingSettingsController())
                     UserDefaults.standard.setValue(false, forKey: "phone")
                     UserDefaults.standard.setValue(false, forKey: "isSetProfileInfo")
                     CorasedasadRddealm.shared.reasdmasodvaeAasdlalsdsad()

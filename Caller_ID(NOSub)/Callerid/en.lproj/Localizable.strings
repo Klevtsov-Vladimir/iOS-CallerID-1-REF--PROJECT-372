@@ -20,11 +20,11 @@
 "onbSetCollectionTitle2" = "Tap on Phone";
 "onbSetCollectionTitle3" = "Tap on Call blocking & identification";
 "onbSetCollectionTitle4" = "Turn on all our switches";
-"onbSetCollectionTitle5" = "Return to CallerId";
+"onbSetCollectionTitle5" = "Return to Truecaller";
 
 "openSettings" = "Open settings";
 
-"callIdentTitleAlert" = "Caller id won`t work without this";
+"callIdentTitleAlert" = "CallerID won`t work without this";
 "callIdentMessageAlert" = "Please try again to turn on all switches to identify spam & other calls";
 
 "notNow" = "Not now";
@@ -35,7 +35,7 @@
 "continue" = "Continue";
 
 "verifyTitle" = "Enter your phone number";
-"verifySubtitle" = "CallerId will send you a one-time password via SMS to verify your number";
+"verifySubtitle" = "CallerId will send you a one-time password via SMS to verify your \nnumber";
 
 "phoneNumPlaceholder" = "Your phone number";
 
@@ -247,3 +247,5 @@
 
 "okey" = "Okey";
 "noConnection" = "No internet connection";
+
+"openSettings" = "Open settings";

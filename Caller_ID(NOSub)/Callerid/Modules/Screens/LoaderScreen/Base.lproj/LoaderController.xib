@@ -57,7 +57,7 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="okay" titleAlignment="center">
-                        <fontDescription key="titleFontDescription" name="Manrope-SemiBold" family="Manrope" pointSize="20"/>
+                        <fontDescription key="titleFontDescription" name="Manrope-Bold" family="Manrope" pointSize="20"/>
                         <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
@@ -70,7 +70,7 @@
                         <constraint firstAttribute="height" constant="23" id="h1U-rb-XEJ"/>
                         <constraint firstAttribute="width" constant="300" id="hib-LA-Vtq"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Manrope-Regular" family="Manrope" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="Manrope-SemiBold" family="Manrope" pointSize="20"/>
                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                     <nil key="highlightedColor"/>
                 </label>
