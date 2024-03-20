@@ -6,43 +6,148 @@
 //
 import UIKit
 
-final class newPhoneView: NibDesignable {
+final class NewPhoneView: UIView {
     
-    
-    private(set) weak var containerView: UIView!
-    private(set) weak var textField: UITextField!
-    private(set) weak var countryImageView: UIImageView!
-    private(set) weak var countryPhoneLabel: UILabel!
-    private weak var iconLabel: UIImageView!
+    private(set) var containerView: UIView!
+    private(set) var textField: UITextField!
+    private(set) var countryImageView: UIImageView!
+    private(set) var countryPhoneLabel: UILabel!
+    private var iconLabel: UIImageView!
     
     var countText: Int?
-    
     var maxLength = 16
+    var callbackCountry: (() -> Void)?
+    var textFieldDidChange: ((String) -> Void)?
     
-    var callbackCountry: (()->())?
-    var textFieldDidChange: ((String)->())?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setup()
+        setupConstraints()
     }
-}
-
-//MARK: - Private methods
-private extension newPhoneView {
-    @objc func viewTapped() {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+        setupConstraints()
+    }
+    
+    private func setup() {
+        containerView = UIView()
+        addSubview(containerView)
+        
+        countryImageView = UIImageView()
+        containerView.addSubview(countryImageView)
+        
+        textField = UITextField()
+        containerView.addSubview(textField)
+        textField.delegate = self
+        
+        countryPhoneLabel = UILabel()
+        containerView.addSubview(countryPhoneLabel)
+        
+        iconLabel = UIImageView()
+        containerView.addSubview(iconLabel)
+        
+        setupUI()
+        setupGestures()
+    }
+    
+    private func setupUI() {
+        textField.textColor = .black
+        textField.borderStyle = .none
+        textField.keyboardType = .phonePad
+        textField.keyboardAppearance = UIKeyboardAppearance.dark
+        textField.delegate = self
+        textField.autocorrectionType = .no
+        textField.spellCheckingType = .no
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "(999) 888-77-66",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "PHgray")]
+        )
+        textField.font = UIFont(name: "Manrope-SemiBold", size: 16)
+        
+        containerView.backgroundColor = .clear
+        containerView.layer.cornerRadius = 32
+        containerView.backgroundColor = .white
+        
+        countryPhoneLabel.textColor = .black
+        countryPhoneLabel.font = UIFont(name: "Manrope-SemiBold", size: 16)
+    }
+    
+    private func setupConstraints() {
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        countryImageView.translatesAutoresizingMaskIntoConstraints = false
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        countryPhoneLabel.translatesAutoresizingMaskIntoConstraints = false
+        iconLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            containerView.topAnchor.constraint(equalTo: topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            countryImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            countryImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
+            countryImageView.widthAnchor.constraint(equalToConstant: 24),
+            countryImageView.heightAnchor.constraint(equalToConstant: 24),
+            
+            countryPhoneLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            countryPhoneLabel.leadingAnchor.constraint(equalTo: countryImageView.trailingAnchor, constant: 10),
+            countryPhoneLabel.heightAnchor.constraint(equalToConstant: 24),
+            
+            textField.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
+            textField.heightAnchor.constraint(equalToConstant: 20),
+            textField.widthAnchor.constraint(equalTo: containerView.widthAnchor, constant: -40),
+            textField.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
+        ])
+    }
+    
+    private func setupGestures() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        gesture.cancelsTouchesInView = false
+        containerView.addGestureRecognizer(gesture)
+        
+        textField.addTarget(self, action: #selector(textFieldChange), for: .editingChanged)
+    }
+    
+    @objc private func viewTapped() {
         callbackCountry?()
     }
     
-    @objc func textFieldChange() {
+    @objc private func textFieldChange() {
         textFieldDidChange?(textField.text ?? "")
     }
 }
 
-//MARK: - Open methods
-extension newPhoneView {
+//MARK: - UITextFieldDelegate
+extension NewPhoneView: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField.text?.count ?? 0) < maxLength {
+            return true
+        } else {
+            if string == "" {
+                return true
+            } else {
+                if textField.keyboardType == .emailAddress {
+                    return true
+                }
+                if let countText = countText, countText > (textField.text?.count ?? 0) {
+                    return true
+                }
+                return false
+            }
+        }
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+    }
+}
+
+//MARK: - Public Methods
+extension NewPhoneView {
     func setCountryImage(_ image: UIImage?) {
         if let image = image {
             countryImageView.image = image
@@ -88,104 +193,3 @@ extension newPhoneView {
         }
     }
 }
-
-//MARK: - UITextFieldDelegate
-extension newPhoneView: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if (textField.text?.count ?? 0) < maxLength {
-            return true
-        } else {
-            if string == "" {
-                return true
-            } else {
-                if textField.keyboardType == .emailAddress {
-                    return true
-                }
-                if let countText = countText, countText > (textField.text?.count ?? 0) {
-                    return true
-                }
-                return false
-            }
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.endEditing(true)
-    }
-}
-
-//MARK: - Setup
-private extension newPhoneView {
-    func setup() {
-        setupUI()
-        setupGestures()
-    }
-    
-    func setupUI() {
-        textField.textColor = .black
-        textField.borderStyle = .none
-        textField.keyboardType = .numberPad
-        textField.delegate = self
-        textField.autocorrectionType = .no
-        textField.spellCheckingType = .no
-        
-        
-        containerView.backgroundColor = .clear
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
-        containerView.layer.borderWidth = 1
-        containerView.layer.cornerRadius = 10
-        
-        countryPhoneLabel.textColor = .black
-        countryPhoneLabel.font = .systemFont(ofSize: 16, weight: .medium)
-    }
-    private func setupConstaint() {
-            // Assuming you have initialized containerView and added it as a subview
-            // Assuming all views (countryImageView, textField, countryPhoneLabel, standImageView) have been created and added as subviews to containerView
-            
-            // Set up constraints to arrange the views
-            countryImageView.translatesAutoresizingMaskIntoConstraints = false
-            textField.translatesAutoresizingMaskIntoConstraints = false
-            countryPhoneLabel.translatesAutoresizingMaskIntoConstraints = false
-            iconLabel.translatesAutoresizingMaskIntoConstraints = false
-            
-            containerView.addSubview(countryImageView)
-            containerView.addSubview(textField)
-            containerView.addSubview(countryPhoneLabel)
-            containerView.addSubview(iconLabel)
-            
-            NSLayoutConstraint.activate([
-                // Constraints for countryImageView
-                countryImageView.topAnchor.constraint(equalTo: containerView.topAnchor),
-                countryImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-                countryImageView.widthAnchor.constraint(equalToConstant: 24),
-                countryImageView.heightAnchor.constraint(equalToConstant: 24),
-                
-                // Constraints for textField
-                textField.topAnchor.constraint(equalTo: containerView.topAnchor),
-                textField.leadingAnchor.constraint(equalTo: countryImageView.trailingAnchor, constant: /* specify spacing */),
-                textField.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-                textField.heightAnchor.constraint(equalToConstant: /* specify height */),
-                
-                // Constraints for countryPhoneLabel
-                countryPhoneLabel.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: /* specify spacing */),
-                countryPhoneLabel.leadingAnchor.constraint(equalTo: countryImageView.trailingAnchor, constant: /* specify spacing */),
-                countryPhoneLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-                
-                // Constraints for standImageView
-                iconLabel.topAnchor.constraint(equalTo: countryPhoneLabel.bottomAnchor, constant: /* specify spacing */),
-                iconLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-                iconLabel.widthAnchor.constraint(equalToConstant: /* specify width */),
-                iconLabel.heightAnchor.constraint(equalToConstant: /* specify height */),
-                iconLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-            ])
-        }
-    
-    func setupGestures() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
-        gesture.cancelsTouchesInView = false
-        containerView.addGestureRecognizer(gesture)
-        
-        textField.addTarget(self, action: #selector(textFieldChange), for: .editingChanged)
-    }
-}
-

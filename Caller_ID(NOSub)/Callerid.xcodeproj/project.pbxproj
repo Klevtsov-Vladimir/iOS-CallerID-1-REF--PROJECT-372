@@ -184,6 +184,7 @@
 		6FC9798B2BA9B15000B5BEF1 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC9798A2BA9B15000B5BEF1 /* Shadow.swift */; };
 		6FC979952BA9F98000B5BEF1 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC979942BA9F98000B5BEF1 /* CustomAlert.swift */; };
 		6FC979972BAA46F700B5BEF1 /* newPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC979962BAA46F700B5BEF1 /* newPhoneView.swift */; };
+		6FC9799B2BAB0F2200B5BEF1 /* newPhoneVerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC9799A2BAB0F2200B5BEF1 /* newPhoneVerCell.swift */; };
 		DFCE0B5BCAEBED1DF837B803 /* Pods_Callerid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA32DC4CF73C78B8BE2FE77 /* Pods_Callerid.framework */; };
 /* End PBXBuildFile section */
 
@@ -375,6 +376,7 @@
 		6FC9798A2BA9B15000B5BEF1 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		6FC979942BA9F98000B5BEF1 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		6FC979962BAA46F700B5BEF1 /* newPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPhoneView.swift; sourceTree = "<group>"; };
+		6FC9799A2BAB0F2200B5BEF1 /* newPhoneVerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPhoneVerCell.swift; sourceTree = "<group>"; };
 		B99F9215AFC96CD28CF814C5 /* Pods-Callerid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callerid.release.xcconfig"; path = "Target Support Files/Pods-Callerid/Pods-Callerid.release.xcconfig"; sourceTree = "<group>"; };
 		DAA32DC4CF73C78B8BE2FE77 /* Pods_Callerid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callerid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -482,6 +484,7 @@
 			children = (
 				1F30D3F12A5429C100C13AE9 /* PhoneVerifyCell.swift */,
 				1F30D3F22A5429C100C13AE9 /* PhoneVerifyCell.xib */,
+				6FC9799A2BAB0F2200B5BEF1 /* newPhoneVerCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1011,6 +1014,7 @@
 		1FE294142A53426F00343EBD /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				6FC9799C2BAB68D100B5BEF1 /* customAlert */,
 				6FC979892BA9B13E00B5BEF1 /* shadows */,
 				6FC979802BA8F27600B5BEF1 /* BackgroundGradient */,
 				1F4585932A614D9E0089BF76 /* BetterNameTypeView */,
@@ -1021,7 +1025,6 @@
 				1F28F1922A559A380003288E /* PictureView */,
 				1F4708C42A544D91007F46FE /* PhoneView */,
 				1FE294152A53426F00343EBD /* MainButton */,
-				6FC979942BA9F98000B5BEF1 /* CustomAlert.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -1193,6 +1196,14 @@
 				6FC9798A2BA9B15000B5BEF1 /* Shadow.swift */,
 			);
 			path = shadows;
+			sourceTree = "<group>";
+		};
+		6FC9799C2BAB68D100B5BEF1 /* customAlert */ = {
+			isa = PBXGroup;
+			children = (
+				6FC979942BA9F98000B5BEF1 /* CustomAlert.swift */,
+			);
+			path = customAlert;
 			sourceTree = "<group>";
 		};
 		A0942B4CBC8905E69E9DC368 /* Pods */ = {
@@ -1486,6 +1497,7 @@
 				1FA2EF852A6598F5000F1ACE /* EditImageCell.swift in Sources */,
 				6FC9798B2BA9B15000B5BEF1 /* Shadow.swift in Sources */,
 				1FE2941C2A53426F00343EBD /* OnboardingSettingsCell.swift in Sources */,
+				6FC9799B2BAB0F2200B5BEF1 /* newPhoneVerCell.swift in Sources */,
 				1FF9D4992A5C516100755085 /* CorasedasadRddealm.swift in Sources */,
 				1FA7CED52A5FF94F00ECA7ED /* UITableView.swift in Sources */,
 				1F49B6A32A66EE3D00481313 /* BlockReportCell.swift in Sources */,

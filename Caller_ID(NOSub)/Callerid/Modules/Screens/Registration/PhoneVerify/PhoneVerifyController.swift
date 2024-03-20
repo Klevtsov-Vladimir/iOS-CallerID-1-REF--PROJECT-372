@@ -9,7 +9,7 @@ final class PhoneVerifyController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var continueView: MainButton!
     
-    @IBOutlet private weak var continueButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var continueButtonBottomConstraint: NSLayoutConstraint!
     
     private var phone = Phone()
     
@@ -42,7 +42,7 @@ final class PhoneVerifyController: UIViewController {
 //        let model = UIDevice.model
 //        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
 //        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
-//        if let keyboardSize = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue, self.continueButtonBottomConstraint.constant == 10 {
+//        if let keyboardSize = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue, self.continueButtonBottomConstraint.constant == 138 {
 //            if UIDevice.current.userInterfaceIdiom == .pad {
 //                self.continueButtonBottomConstraint.constant += keyboardSize.height + 60
 //            } else {
@@ -57,7 +57,7 @@ final class PhoneVerifyController: UIViewController {
 //        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
 //        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
 //        if let _ = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue {
-//            self.continueButtonBottomConstraint.constant = 10
+//            self.continueButtonBottomConstraint.constant = 138
 //            view.layoutIfNeeded()
 //        }
 //    }
@@ -77,34 +77,28 @@ extension PhoneVerifyController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneVerifyCell", for: indexPath) as? PhoneVerifyCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "newPhoneVerifyCell", for: indexPath) as? NewPhoneVerifyCell else { return UITableViewCell() }
         let row = Rows.allCases[indexPath.row]
         
         switch row {
         case .country:
-            //cell.phoneView.setTitleText("country".localized())
-            
             if !countries.isEmpty {
-                cell.phoneView.isHiddenImage(isHidden: false)
-                cell.phoneView.isHiddenLabel(isHidden: false)
-                cell.phoneView.isHiddenTextField(isHidden: true)
-                cell.phoneView.setCountryImage(phone.countryInfo?.imageCountry)
+                cell.newPhoneView.isHiddenImage(isHidden: false)
+                cell.newPhoneView.isHiddenLabel(isHidden: false)
+                cell.newPhoneView.isHiddenTextField(isHidden: true)
+                cell.newPhoneView.setCountryImage(phone.countryInfo?.imageCountry)
                 
                 let countryStr = phone.countryInfo?.countries?.name ?? ""
                 let phoneCode = " (\(phone.countryInfo?.countries?.dialCode ?? ""))"
-                cell.phoneView.setPhoneTitleText(countryStr + phoneCode)
+                cell.newPhoneView.setPhoneTitleText(countryStr + phoneCode)
             }
         case .phone:
-            cell.phoneView.isHiddenImage(isHidden: true)
-            cell.phoneView.isHiddenLabel(isHidden: true)
-            cell.phoneView.isHiddenTextField(isHidden: false)
-            //cell.phoneView.setTitleText("phoneNum".localized())
-            cell.phoneView.setPlaceholder("phoneNumPlaceholder".localized())
-            cell.phoneView.textField.keyboardType = .numberPad
-            cell.phoneView.textField.autocorrectionType = .no
-            cell.phoneView.textField.spellCheckingType = .no
-            cell.phoneView.textField.text = self.phone.countryInfo?.countries?.dialCode
-            
+            cell.newPhoneView.isHiddenImage(isHidden: true)
+            cell.newPhoneView.isHiddenLabel(isHidden: true)
+            cell.newPhoneView.isHiddenTextField(isHidden: false)
+            cell.newPhoneView.textField.keyboardType = .phonePad
+            cell.newPhoneView.textField.autocorrectionType = .no
+            cell.newPhoneView.textField.spellCheckingType = .no
         }
         
         cell.callback = { [weak self] in
@@ -172,9 +166,9 @@ private extension PhoneVerifyController {
             
             if phoneNumberCustomDefaultRegion == nil {
                 let indexPath = IndexPath(row: 1, section: 0)
-                let cell = self.tableView.cellForRow(at: indexPath) as? PhoneVerifyCell
+                let cell = self.tableView.cellForRow(at: indexPath) as? NewPhoneVerifyCell
                 
-                cell?.phoneView.animateBorder()
+                cell?.newPhoneView.animateBorder()
             } else {
                 let dial = self.phone.countryInfo?.countries?.dialCode ?? ""
                 let dialWithouPlus = (self.phone.countryInfo?.countries?.dialCode ?? "").replacingOccurrences(of: "+", with: "")
@@ -193,7 +187,20 @@ private extension PhoneVerifyController {
                 
                 self.phone.phone = actualPhone
                 
-                let alert = UIAlertController(title: "verifyTitleAlert".localized(), message: actualPhone, preferredStyle: .actionSheet)
+                let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+                
+                let attributedString = NSAttributedString(string: "verifyTitleAlert".localized(), attributes: [
+                    NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13, weight: .regular),
+                    NSAttributedString.Key.foregroundColor : UIColor(named: "alertTitleColor") ?? .gray
+                        ])
+                let attributedStringMessege = NSAttributedString(string: actualPhone, attributes: [
+                    NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13, weight: .regular),
+                        NSAttributedString.Key.foregroundColor : UIColor(named: "alertTitleColor") ?? .gray
+                        ])
+                alert.setValue(attributedString, forKey: "attributedTitle")
+                alert.setValue(attributedStringMessege, forKey: "attributedMessage")
+                alert.view.subviews.first?.subviews.first?.backgroundColor = UIColor(named: "AlertBG2nd")
+                alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor(named: "AlertBG3nd")
                 
                 let confirmAction = UIAlertAction(title: "confirm".localized(), style: .default) { _ in
                     let controller = SmsVerifyController(phone: self.phone)
@@ -205,7 +212,7 @@ private extension PhoneVerifyController {
                                 DispatchQueue.main.async {
                                     let model = ProfileDB()
                                     model.country = self.phone.countryInfo?.countries?.code ?? ""
-
+                                    
                                     CorasedasadRddealm.shared.addUser(model: model)
                                 }
                                 controller.codeSended()
@@ -217,7 +224,10 @@ private extension PhoneVerifyController {
                     }
                     self.navigationController?.pushViewController(controller, animated: true)
                 }
-                let cancelAction = UIAlertAction(title: "cancel".localized(), style: .default)
+                confirmAction.setValue(UIColor(named: "textBlue"), forKey: "titleTextColor")
+                
+                let cancelAction = UIAlertAction(title: "cancel".localized(), style: .cancel)
+                cancelAction.setValue(UIColor(named: "textBlue"), forKey: "titleTextColor")
                 
                 alert.addAction(confirmAction)
                 alert.addAction(cancelAction)
@@ -236,7 +246,7 @@ private extension PhoneVerifyController {
     func setupTable() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "PhoneVerifyCell", bundle: nil), forCellReuseIdentifier: "PhoneVerifyCell")
+        tableView.register(NewPhoneVerifyCell.self, forCellReuseIdentifier: "newPhoneVerifyCell")
         tableView.backgroundColor = .clear
     }
     

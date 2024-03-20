@@ -35,37 +35,44 @@ final class CreateProfileController: UIViewController {
         
         setup()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
 }
 
 //MARK: - Private methods
 private extension CreateProfileController {
-    @objc func keyboardWillShow(notification: NSNotification) {
-        let model = UIDevice.model
-        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
-        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
-        if let keyboardSize = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue, self.continueButtonBottomConstraint.constant == 10 {
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                self.continueButtonBottomConstraint.constant += keyboardSize.height + 60
-            } else {
-                self.continueButtonBottomConstraint.constant += keyboardSize.height + 35
-            }
-            
-            let indexPath = IndexPath(row: selectedIndexCell, section: 0)
-            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-            
-            view.layoutIfNeeded()
-        }
-    }
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        let model = UIDevice.model
+//        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
+//        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
+//        if let keyboardSize = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue, self.continueButtonBottomConstraint.constant == 10 {
+//            if UIDevice.current.userInterfaceIdiom == .pad {
+//                self.continueButtonBottomConstraint.constant += keyboardSize.height + 60
+//            } else {
+//                self.continueButtonBottomConstraint.constant += keyboardSize.height + 35
+//            }
+//            
+//            let indexPath = IndexPath(row: selectedIndexCell, section: 0)
+//            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+//            
+//            view.layoutIfNeeded()
+//        }
+//    }
     
-    @objc func keyboardWillHide(notification: NSNotification) {
-        let model = UIDevice.model
-        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
-        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
-        if let _ = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue {
-            self.continueButtonBottomConstraint.constant = 10
-            view.layoutIfNeeded()
-        }
-    }
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        let model = UIDevice.model
+//        let isNew = model == .iPhone12 || model == .iPhone11 || model == .iPhone11Pro || model == .iPhone11ProMax || model == .iPhone12Pro || model == .iPhone12ProMax || model == .iPhoneX || model == .iPhoneXR || model == .iPhoneXS || model == .iPhoneXSMax || model == .undefined
+//        let keyboardTypeInfo = isNew == true ? UIResponder.keyboardFrameEndUserInfoKey : UIResponder.keyboardFrameBeginUserInfoKey
+//        if let _ = (notification.userInfo?[keyboardTypeInfo] as? NSValue)?.cgRectValue {
+//            self.continueButtonBottomConstraint.constant = 10
+//            view.layoutIfNeeded()
+//        }
+//    }
     
     func showPictureAlert() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -129,7 +136,7 @@ extension CreateProfileController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let row = Rows.allCases[indexPath.row]
         switch row {
-        case .picture: return 100
+//        case .picture: return 100
         default: return 95
         }
     }
@@ -145,18 +152,18 @@ extension CreateProfileController: UITableViewDataSource {
         let row = Rows.allCases[indexPath.row]
         
         switch row {
-        case .picture:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as? PictureCell else { return UITableViewCell() }
-            
-            cell.pictureView.setImdaasdgfesdsdffdewews(profile.avatarImage)
-            cell.pictureView.saeastsTidtsldesTedsdsxdtssds(row.title)
-            
-            cell.pictureView.callback = {
-                self.selectedIndexCell = indexPath.row
-                self.showPictureAlert()
-            }
-            
-            return cell
+//        case .picture:
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as? PictureCell else { return UITableViewCell() }
+//            
+//            cell.pictureView.setImdaasdgfesdsdffdewews(profile.avatarImage)
+//            cell.pictureView.saeastsTidtsldesTedsdsxdtssds(row.title)
+//            
+//            cell.pictureView.callback = {
+//                self.selectedIndexCell = indexPath.row
+//                self.showPictureAlert()
+//            }
+//            
+//            return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneVerifyCell", for: indexPath) as? PhoneVerifyCell else { return UITableViewCell() }
             
@@ -174,8 +181,8 @@ extension CreateProfileController: UITableViewDataSource {
             case .lastName:
                 cell.phoneView.setTextFieldKeyboardType(type: .default)
                 cell.phoneView.textField.text = self.profile.lastName
-            case .picture:
-                break
+//            case .picture:
+//                break
             }
             
             cell.phoneView.callbackCountry = {
@@ -279,9 +286,9 @@ private extension CreateProfileController {
     }
     
     func setupObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 
@@ -295,11 +302,11 @@ private extension CreateProfileController {
     }
     
     enum Rows: Int, CaseIterable {
-        case picture, firstName, lastName, email
+        case /*picture, */firstName, lastName, email
         
         var title: String {
             switch self {
-            case .picture: return "addPicture".localized()
+            //case .picture: return "addPicture".localized()
             case .firstName: return "firstName".localized()
             case .lastName: return "lastName".localized()
             case .email: return "email".localized()

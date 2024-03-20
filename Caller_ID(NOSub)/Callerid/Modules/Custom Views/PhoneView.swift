@@ -17,7 +17,7 @@ final class PhoneView: NibDesignable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+       
         setup()
     }
 }

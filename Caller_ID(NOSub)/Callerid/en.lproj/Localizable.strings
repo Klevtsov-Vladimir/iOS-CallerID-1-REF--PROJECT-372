@@ -35,7 +35,7 @@
 "continue" = "Continue";
 
 "verifyTitle" = "Enter your phone number";
-"verifySubtitle" = "CallerId will send you a one-time password via SMS to verify your \nnumber";
+"verifySubtitle" = "CallerID will send you a one-time \npassword via SMS to verify your number";
 
 "phoneNumPlaceholder" = "Your phone number";
 
@@ -51,7 +51,7 @@
 "otpSubtitle" = "CallerId will send you a one-time password via SMS to verify your number";
 
 "createProfile" = "Create profile";
-"createProfileSubtitle" = "Your name and profile picture will be used for called ID and profile details";
+"createProfileSubtitle" = "Your name and profile picture will be used \nfor called ID and profile details";
 
 "addPicture" = "Add a profile picture";
 
@@ -249,3 +249,4 @@
 "noConnection" = "No internet connection";
 
 "openSettings" = "Open settings";
+"changeNumber" = "Change number";

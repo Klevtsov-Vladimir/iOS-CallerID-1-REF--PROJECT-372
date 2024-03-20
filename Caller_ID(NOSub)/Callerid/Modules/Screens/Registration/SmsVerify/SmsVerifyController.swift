@@ -6,10 +6,11 @@ final class SmsVerifyController: UIViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var otpView: DPOTPView!
-    @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var continueView: MainButton!
     
+    
+    @IBOutlet var backButton: UIButton!
     @IBOutlet private weak var stackViewBottomConstraint: NSLayoutConstraint!
     
     static let config = Realm.Configuration(
@@ -42,7 +43,13 @@ final class SmsVerifyController: UIViewController {
 
         setup()
     }
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
     @IBAction func backAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -50,17 +57,17 @@ final class SmsVerifyController: UIViewController {
 
 //MARK: - Private methods
 private extension SmsVerifyController {
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, self.stackViewBottomConstraint.constant == 10 {
-            self.stackViewBottomConstraint.constant += keyboardSize.height + 70
-            view.layoutIfNeeded()
-        }
-    }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-        self.stackViewBottomConstraint.constant = 10
-        view.layoutIfNeeded()
-    }
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, self.stackViewBottomConstraint.constant == 10 {
+//            self.stackViewBottomConstraint.constant += keyboardSize.height + 70
+//            view.layoutIfNeeded()
+//        }
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        self.stackViewBottomConstraint.constant = 10
+//        view.layoutIfNeeded()
+//    }
     
     @objc func timerRemaining() {
         let verifyDate = (UserDefaults.standard.object(forKey: "verifyExpiredDate") as? Date) ?? Date()
@@ -129,15 +136,25 @@ private extension SmsVerifyController {
     }
     
     func setuxcvzxcvpUI() {
+        timeLabel.font = UIFont(name: "Manrope-Medium", size: 16)
+        timeLabel.textColor = UIColor(named: "textLightGrey")
+        
         titleLabel.text = "enterotp".localized()
         titleLabel.textColor = .black
-        titleLabel.font = .systemFont(ofSize: 18, weight: .medium)
+        titleLabel.font = UIFont(name: "Manrope-Bold", size: 20)
         
-        subtitleLabel.text = "otpSubtitle".localized() + " \(phone.phone ?? "")"
+        subtitleLabel.text = "otpSubtitle".localized() + " \n\(phone.phone ?? "")"
         subtitleLabel.textColor = .black
-        subtitleLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        subtitleLabel.font = UIFont(name: "Manrope-Medium", size: 16)
         
         otpView.dpOTPViewDelegate = self
+        otpView.fontTextField = UIFont(name: "Manrope-SemiBold", size: 18) ?? UIFont.systemFont(ofSize: 18)
+        otpView.keyboardType = .phonePad
+        otpView.isDarkKeyboard = true
+        
+        backButton.setTitleColor(UIColor(named: "textLightGrey"), for: .normal)
+        backButton.setTitle("changeNumber".localized(), for: .normal)
+        backButton.titleLabel?.font = UIFont(name: "Manrope-Medium", size: 16)
         
         continueView.isEnableView(isEnable: false)
         continueView.setNeedsLayout()
@@ -205,9 +222,9 @@ private extension SmsVerifyController {
     }
     
     func setupObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 
