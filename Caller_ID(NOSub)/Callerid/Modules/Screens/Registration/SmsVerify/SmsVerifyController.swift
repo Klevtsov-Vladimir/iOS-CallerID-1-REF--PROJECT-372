@@ -140,11 +140,11 @@ private extension SmsVerifyController {
         timeLabel.textColor = UIColor(named: "textLightGrey")
         
         titleLabel.text = "enterotp".localized()
-        titleLabel.textColor = .black
+        titleLabel.textColor = .white
         titleLabel.font = UIFont(name: "Manrope-Bold", size: 20)
         
         subtitleLabel.text = "otpSubtitle".localized() + " \n\(phone.phone ?? "")"
-        subtitleLabel.textColor = .black
+        subtitleLabel.textColor = .white
         subtitleLabel.font = UIFont(name: "Manrope-Medium", size: 16)
         
         otpView.dpOTPViewDelegate = self

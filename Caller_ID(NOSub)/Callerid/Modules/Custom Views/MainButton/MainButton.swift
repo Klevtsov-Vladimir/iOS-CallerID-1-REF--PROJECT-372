@@ -1,7 +1,7 @@
 import UIKit
 
 final class MainButton: NibDesignable {
-    @IBOutlet private weak var button: UIButton!
+    @IBOutlet weak var button: UIButton!
     
     var isRedBlock = false
     

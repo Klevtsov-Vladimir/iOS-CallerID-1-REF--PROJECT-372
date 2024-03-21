@@ -369,8 +369,8 @@ extension EditProfileController: UITableViewDataSource {
             
             cell.phoneView.setTitleText(row.title ?? "")
 //            cell.containerView?.removeGestureRecognizer(cell.)
-            cell.phoneView.countryPhoneLabel.text = ("\(dataOfCountry?.countries?.name ?? "") (\(dataOfCountry?.countries?.dialCode ?? ""))")
-            cell.phoneView.countryPhoneLabel.isHidden = false
+//            cell.phoneView.countryPhoneLabel.text = ("\(dataOfCountry?.countries?.name ?? "") (\(dataOfCountry?.countries?.dialCode ?? ""))")
+//            cell.phoneView.countryPhoneLabel.isHidden = false
             cell.phoneView.setCountryImage(dataOfCountry?.imageCountry ?? UIImage())
             cell.phoneView.isHiddenTextField(isHidden: true)
             
@@ -466,7 +466,7 @@ extension EditProfileController: UITableViewDataSource {
             switch row {
             case .firstName:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
                 cell.phoneView.isHiddenTextField(isHidden: false)
@@ -493,7 +493,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .lastName:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
@@ -519,7 +519,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .phone:
                 cell.phoneView.textField.isEnabled = false
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.textField.keyboardType = .numberPad
@@ -546,7 +546,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .email:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
@@ -573,7 +573,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .website:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
@@ -599,7 +599,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .job:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
@@ -625,7 +625,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .company:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
@@ -650,7 +650,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .street:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
@@ -675,7 +675,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .zip:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)
@@ -700,7 +700,7 @@ extension EditProfileController: UITableViewDataSource {
                 return cell
             case .city:
                 cell.phoneView.textField.isEnabled = true
-                cell.phoneView.countryPhoneLabel.isHidden = true
+//                cell.phoneView.countryPhoneLabel.isHidden = true
                 cell.phoneView.isHiddenTextField(isHidden: false)
                 cell.phoneView.isHiddenImage(isHidden: true)
                 cell.phoneView.isHiddenLabel(isHidden: true)

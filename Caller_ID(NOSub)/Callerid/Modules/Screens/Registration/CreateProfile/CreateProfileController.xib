@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,9 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateProfileController" customModule="CallDirectoryExtension" customModuleProvider="target">
             <connections>
+                <outlet property="addEmailCons" destination="DaP-S3-AB4" id="3du-LU-ilG"/>
+                <outlet property="avatar" destination="hbA-6W-ZT7" id="ebS-Nh-yge"/>
                 <outlet property="continueView" destination="PHz-Zy-7Fx" id="mHL-Dv-Psm"/>
                 <outlet property="subtitleLabel" destination="L6i-EV-Jjl" id="62F-Sj-gh8"/>
                 <outlet property="tableView" destination="IBQ-uR-GHh" id="Cfe-95-g6W"/>
+                <outlet property="tableViewHeight" destination="hJi-r5-UTY" id="qtI-Lx-SNP"/>
                 <outlet property="titleLabel" destination="wZg-Xh-h93" id="L8D-KA-Wey"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -43,27 +45,33 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-uR-GHh">
-                    <rect key="frame" x="20" y="236" width="353" height="240"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="20" y="232" width="353" height="190"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="240" id="yJ9-U1-lyR"/>
+                        <constraint firstAttribute="height" constant="190" id="hJi-r5-UTY"/>
                     </constraints>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHz-Zy-7Fx" customClass="MainButton" customModule="Callerid">
-                    <rect key="frame" x="20" y="488" width="353" height="64"/>
+                    <rect key="frame" x="20" y="453" width="353" height="64"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="1i8-is-hPB"/>
                     </constraints>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarImage" translatesAutoresizingMaskIntoConstraints="NO" id="hbA-6W-ZT7" userLabel="AvatarBackPhoto">
+                    <rect key="frame" x="160.66666666666666" y="160" width="72" height="72"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2d-cI-2iH" userLabel="ButtonPhoto">
                     <rect key="frame" x="160.66666666666666" y="160" width="72" height="72"/>
-                    <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="72" id="hc3-CT-yX6"/>
                         <constraint firstAttribute="width" constant="72" id="pq0-Tp-eqf"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="avatarAction:" destination="-1" eventType="touchUpInside" id="3yZ-69-lSj"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -71,14 +79,19 @@
             <constraints>
                 <constraint firstItem="L6i-EV-Jjl" firstAttribute="centerX" secondItem="wZg-Xh-h93" secondAttribute="centerX" id="1hR-QY-02z"/>
                 <constraint firstItem="wZg-Xh-h93" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8JQ-GV-1Ow"/>
-                <constraint firstItem="O2d-cI-2iH" firstAttribute="top" secondItem="L6i-EV-Jjl" secondAttribute="bottom" constant="14" id="Dlm-jL-gy8"/>
+                <constraint firstItem="O2d-cI-2iH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="160" id="DaP-S3-AB4"/>
                 <constraint firstItem="wZg-Xh-h93" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="Eg0-pU-4EO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IBQ-uR-GHh" secondAttribute="trailing" constant="20" id="F4k-p4-SkR"/>
                 <constraint firstItem="IBQ-uR-GHh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IzD-wN-Dnp"/>
-                <constraint firstAttribute="bottom" secondItem="PHz-Zy-7Fx" secondAttribute="bottom" constant="300" id="VyV-zy-7im"/>
-                <constraint firstItem="IBQ-uR-GHh" firstAttribute="top" secondItem="O2d-cI-2iH" secondAttribute="bottom" constant="4" id="g1M-5U-wLa"/>
+                <constraint firstItem="hbA-6W-ZT7" firstAttribute="top" secondItem="O2d-cI-2iH" secondAttribute="top" id="NWE-El-f2Y"/>
+                <constraint firstItem="IBQ-uR-GHh" firstAttribute="bottom" secondItem="PHz-Zy-7Fx" secondAttribute="top" constant="-31" id="U0V-vV-tJb"/>
+                <constraint firstItem="IBQ-uR-GHh" firstAttribute="top" secondItem="O2d-cI-2iH" secondAttribute="bottom" id="Y6T-B6-u3R"/>
+                <constraint firstItem="hbA-6W-ZT7" firstAttribute="bottom" secondItem="O2d-cI-2iH" secondAttribute="bottom" id="bHw-lU-p7N"/>
+                <constraint firstItem="IBQ-uR-GHh" firstAttribute="top" secondItem="O2d-cI-2iH" secondAttribute="bottom" id="g1M-5U-wLa"/>
                 <constraint firstItem="O2d-cI-2iH" firstAttribute="centerX" secondItem="L6i-EV-Jjl" secondAttribute="centerX" id="ix8-Uw-MRi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PHz-Zy-7Fx" secondAttribute="trailing" constant="20" id="kpd-bT-CVv"/>
+                <constraint firstItem="hbA-6W-ZT7" firstAttribute="leading" secondItem="O2d-cI-2iH" secondAttribute="leading" id="n0e-Gu-R6K"/>
+                <constraint firstItem="hbA-6W-ZT7" firstAttribute="trailing" secondItem="O2d-cI-2iH" secondAttribute="trailing" id="p5v-yG-72o"/>
                 <constraint firstItem="PHz-Zy-7Fx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uI2-WO-clP"/>
                 <constraint firstItem="L6i-EV-Jjl" firstAttribute="top" secondItem="wZg-Xh-h93" secondAttribute="bottom" constant="4" id="xPU-v2-CsS"/>
             </constraints>
@@ -86,9 +99,7 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="avatarImage" width="72" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -244,9 +244,9 @@ extension BlockReportController: UITableViewDataSource {
             
             cell.phoneView.textField.isHidden = false
             cell.phoneView.setPlaceholder("blockPlaceholderName".localized())
-            cell.phoneView.countryImageView.isHidden = true
+//            cell.phoneView.countryImageView.isHidden = true
             cell.phoneView.titleLabel.text = "blockTitleName".localized()
-            cell.phoneView.countryPhoneLabel.isHidden = true
+//            cell.phoneView.countryPhoneLabel.isHidden = true
             cell.phoneView.textField.keyboardType = .default
             
             cell.phoneView.textFieldDidChange = { [weak self] text in

@@ -4,8 +4,8 @@ final class PhoneView: NibDesignable {
     @IBOutlet private(set) weak var titleLabel: UILabel!
     @IBOutlet private(set) weak var containerView: UIView!
     @IBOutlet private(set) weak var textField: UITextField!
-    @IBOutlet private(set) weak var countryImageView: UIImageView!
-    @IBOutlet private(set) weak var countryPhoneLabel: UILabel!
+    //@IBOutlet private(set) weak var countryImageView: UIImageView!
+    //@IBOutlet private(set) weak var countryPhoneLabel: UILabel!
     
     var countText: Int?
     
@@ -40,16 +40,16 @@ extension PhoneView {
     }
     
     func setCountryImage(_ image: UIImage?) {
-        if let image = image {
-            countryImageView.image = image
-            countryImageView.isHidden = false
-        } else {
-            countryImageView.isHidden = true
-        }
+//        if let image = image {
+//            countryImageView.image = image
+//            countryImageView.isHidden = false
+//        } else {
+//            countryImageView.isHidden = true
+//        }
     }
     
     func setPhoneTitleText(_ text: String) {
-        countryPhoneLabel.text = text
+//        countryPhoneLabel.text = text
     }
     
     func setPlaceholder(_ text: String) {
@@ -57,11 +57,11 @@ extension PhoneView {
     }
     
     func isHiddenImage(isHidden: Bool) {
-        countryImageView.isHidden = isHidden
+//        countryImageView.isHidden = isHidden
     }
     
     func isHiddenLabel(isHidden: Bool) {
-        countryPhoneLabel.isHidden = isHidden
+//        countryPhoneLabel.isHidden = isHidden
     }
     
     func isHiddenTextField(isHidden: Bool) {
@@ -120,21 +120,18 @@ private extension PhoneView {
     func setupUI() {
         textField.textColor = .black
         textField.borderStyle = .none
+        textField.keyboardAppearance = UIKeyboardAppearance.dark
         textField.keyboardType = .numberPad
+        textField.font = UIFont(name: "Manrope-SemiBold", size: 16)
         textField.delegate = self
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         
-        titleLabel.textColor = .lightGray
-        titleLabel.font = .systemFont(ofSize: 12, weight: .regular)
+        titleLabel.textColor = UIColor(named: "textLightGrey")
+        titleLabel.font = UIFont(name: "Manrope-Medium", size: 16)
         
-        containerView.backgroundColor = .clear
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
-        containerView.layer.borderWidth = 1
-        containerView.layer.cornerRadius = 10
-        
-        countryPhoneLabel.textColor = .black
-        countryPhoneLabel.font = .systemFont(ofSize: 16, weight: .medium)
+        containerView.backgroundColor = .white
+        containerView.layer.cornerRadius = 24
     }
     
     func setupGestures() {
