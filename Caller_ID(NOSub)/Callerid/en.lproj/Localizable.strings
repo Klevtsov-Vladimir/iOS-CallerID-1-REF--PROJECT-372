@@ -58,10 +58,10 @@
 "chooseGallery" = "Choose from gallery";
 "makePhoto" = "Make photo";
 
-"trackingAdsTitle" = "More choices for relevant ads";
-"trackingAdsSub" = "Get ads that are more personalized";
-"trackingAdsSub1" = "Help businesses to reach customers";
-"trackingAdsDescription" = "\"Allow\" tracking to see personalized ads on CallerId. You can always change this in your device settings.";
+"trackingAdsTitle" = "More choices for relevant \nads";
+"trackingAdsSub" = "Get ads that are more \npersonalized";
+"trackingAdsSub1" = "Help businesses to \nreach customers";
+"trackingAdsDescription" = "\"Allow\" tracking to see personalized ads on \nCallerID. You can always change this in your \ndevice settings.";
 "choose" = "Choose";
 
 "notificTitleImag" = "Call from John Doe Identified by CallerId";

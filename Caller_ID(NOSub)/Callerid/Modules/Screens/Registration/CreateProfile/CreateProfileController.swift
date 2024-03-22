@@ -189,11 +189,14 @@ extension CreateProfileController: UITableViewDataSource {
                 case .firstName:
                     self.profile.firstName = text
                     self.isButtonEnable()
+                    self.isButtonEnableEmail()
                 case .lastName:
                     self.profile.lastName = text
                     self.isButtonEnable()
+                    self.isButtonEnableEmail()
                 case .email:
                     self.profile.email = text
+                    self.isButtonEnableEmail()
                 }
             }
             
@@ -246,7 +249,11 @@ private extension CreateProfileController {
             if isHaveLastNameInfo {
                 lastNameCell?.phoneView.animateBorder()
             }
-            
+            if !isHaveLastNameInfo && !isHaveFirstNameInfo && numberOfRows == 2 {
+                checkIsNameReady()
+                isHaveEmailInfo = true
+                return
+            }
             if (self.profile.email != nil && self.profile.email?.count != 0) && !self.isValidEmail(self.profile.email ?? "") {
                 emailNameCell?.phoneView.animateBorder()
                 isHaveEmailInfo = false
@@ -272,13 +279,10 @@ private extension CreateProfileController {
                 UserDefaults.standard.setValue(true, forKey: "isSetProfileInfo")
                 
                 DispatchQueue.main.async {
-                    let controller = NotificationRequestController()
-                    //.navigationController?.pushViewController(controller, animated: true)
+                    let controller = TrackingAdsController()
+                    self.navigationController?.pushViewController(controller, animated: true)
                 }
             }
-            //else if !isHaveLastNameInfo && !isHaveFirstNameInfo {
-            //                checkIsNameReady()
-            //            }
         }
     }
     
@@ -304,7 +308,12 @@ private extension CreateProfileController {
             continueView.button.backgroundColor = UIColor(named: "PurpleButton")
         }
     }
-    
+    func isButtonEnableEmail() {
+        if profile.firstName != nil && profile.lastName != nil && profile.email != nil {
+            continueView.button.isEnabled = true
+            continueView.button.backgroundColor = UIColor(named: "PurpleButton")
+        }
+    }
     func setupObservers() {
         //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         //

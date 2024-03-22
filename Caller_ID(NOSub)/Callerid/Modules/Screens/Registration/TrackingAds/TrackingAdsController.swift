@@ -3,21 +3,30 @@ import AppTrackingTransparency
 import AdSupport
 
 final class TrackingAdsController: UIViewController {
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var continueButton: MainButton!
+//    private let titleLabel = UILabel()
+//    private let tableView = UITableView()
+//    private let descriptionLabel = UILabel()
+//    private let continueButton = MainButton()
+    private let layerView = UIView()
+//    private let shopingBagImage = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
     }
 }
 
 //MARK: - UITableViewDelegate
 extension TrackingAdsController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
+        return 50
     }
 }
 
@@ -43,27 +52,55 @@ private extension TrackingAdsController {
     func setup() {
         sedmldfmldtupUI()
         setupTable()
+        setUpConstraint()
     }
     
     func sedmldfmldtupUI() {
-        titleLabel.text = "trackingAdsTitle".localized()
-        titleLabel.textColor = .black
-        titleLabel.font = .systemFont(ofSize: 18, weight: .medium)
+        layerView.layer.cornerRadius = 20
+        layerView.layer.borderWidth = 2
+        layerView.layer.borderColor = UIColor(named: "PurpleButton")?.cgColor
+        layerView.addShadow(shadowColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor,
+                            shadowOffset: CGSize(width: 0, height: 0),
+                            shadowRadius: 6.1,
+                            shadowOpacity: 0.7)
         
-        descriptionLabel.text = "trackingAdsDescription".localized()
-        descriptionLabel.textColor = .init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1)
-        descriptionLabel.font = .systemFont(ofSize: 12, weight: .regular)
-        
-        continueButton.setTitleText("choose".localized())
-        continueButton.callback = {
-           
+//        titleLabel.text = "trackingAdsTitle".localized()
+//        titleLabel.textColor = .black
+//        titleLabel.font = .systemFont(ofSize: 18, weight: .medium)
+//        
+//        descriptionLabel.text = "trackingAdsDescription".localized()
+//        descriptionLabel.textColor = .init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1)
+//        descriptionLabel.font = .systemFont(ofSize: 12, weight: .regular)
+//        
+//        continueButton.setTitleText("choose".localized())
+//        continueButton.callback = {
+//            let controller = NotificationRequestController()
+//            self.navigationController?.pushViewController(controller, animated: true)
         }
-    }
+//    }
     
     func setupTable() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "TrackingAdsCell", bundle: nil), forCellReuseIdentifier: "TrackingAdsCell")
+//        tableView.isScrollEnabled = false
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.register(UINib(nibName: "TrackingAdsCell", bundle: nil), forCellReuseIdentifier: "TrackingAdsCell")
+    }
+    func setUpConstraint() {
+//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//        tableView.translatesAutoresizingMaskIntoConstraints = false
+//        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+//        continueButton.translatesAutoresizingMaskIntoConstraints = false
+        layerView.translatesAutoresizingMaskIntoConstraints = false
+//        shopingBagImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(layerView)
+        
+        NSLayoutConstraint.activate([
+            layerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            layerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+            layerView.heightAnchor.constraint(equalToConstant: 320),
+            layerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -322)
+            ])
     }
 }
 
