@@ -120,7 +120,6 @@
 		1FDDC5DD2A5833FE000FC55B /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDDC5DB2A5833FE000FC55B /* MoreController.swift */; };
 		1FDDC5DE2A5833FE000FC55B /* MoreController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDC5DC2A5833FE000FC55B /* MoreController.xib */; };
 		1FDE5F992A56A8D500BD512C /* TrackingAdsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE5F972A56A8D500BD512C /* TrackingAdsController.swift */; };
-		1FDE5F9A2A56A8D500BD512C /* TrackingAdsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDE5F982A56A8D500BD512C /* TrackingAdsController.xib */; };
 		1FDE5F9E2A56ACD400BD512C /* TrackingAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE5F9C2A56ACD400BD512C /* TrackingAdsCell.swift */; };
 		1FDE5F9F2A56ACD400BD512C /* TrackingAdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDE5F9D2A56ACD400BD512C /* TrackingAdsCell.xib */; };
 		1FDE5FA32A56C6EF00BD512C /* NotificationRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE5FA12A56C6EF00BD512C /* NotificationRequestController.swift */; };
@@ -316,7 +315,6 @@
 		1FDDC5DB2A5833FE000FC55B /* MoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		1FDDC5DC2A5833FE000FC55B /* MoreController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreController.xib; sourceTree = "<group>"; };
 		1FDE5F972A56A8D500BD512C /* TrackingAdsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingAdsController.swift; sourceTree = "<group>"; };
-		1FDE5F982A56A8D500BD512C /* TrackingAdsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingAdsController.xib; sourceTree = "<group>"; };
 		1FDE5F9C2A56ACD400BD512C /* TrackingAdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingAdsCell.swift; sourceTree = "<group>"; };
 		1FDE5F9D2A56ACD400BD512C /* TrackingAdsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingAdsCell.xib; sourceTree = "<group>"; };
 		1FDE5FA12A56C6EF00BD512C /* NotificationRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestController.swift; sourceTree = "<group>"; };
@@ -878,7 +876,6 @@
 			children = (
 				1FDE5F9B2A56ACBE00BD512C /* Cell */,
 				1FDE5F972A56A8D500BD512C /* TrackingAdsController.swift */,
-				1FDE5F982A56A8D500BD512C /* TrackingAdsController.xib */,
 			);
 			path = TrackingAds;
 			sourceTree = "<group>";
@@ -1348,7 +1345,6 @@
 				1F4585972A614DBB0089BF76 /* BetterNameTypeView.xib in Resources */,
 				1FDDC5C32A581BD1000FC55B /* GoogleService-Info.plist in Resources */,
 				1F49B69A2A66A6F700481313 /* AboutCell.xib in Resources */,
-				1FDE5F9A2A56A8D500BD512C /* TrackingAdsController.xib in Resources */,
 				1FDDC5DE2A5833FE000FC55B /* MoreController.xib in Resources */,
 				1F28F1972A559A6B0003288E /* PictureView.xib in Resources */,
 				1F49B69F2A66EA3400481313 /* BlockReportController.xib in Resources */,

@@ -3,12 +3,12 @@ import AppTrackingTransparency
 import AdSupport
 
 final class TrackingAdsController: UIViewController {
-//    private let titleLabel = UILabel()
-//    private let tableView = UITableView()
-//    private let descriptionLabel = UILabel()
-//    private let continueButton = MainButton()
+    private let titleLabel = UILabel()
+    private let tableView = UITableView()
+    private let descriptionLabel = UILabel()
+    private let continueButton = UIButton()
     private let layerView = UIView()
-//    private let shopingBagImage = UIImageView()
+    private let shopingBagImage = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +40,10 @@ extension TrackingAdsController: UITableViewDataSource {
         let row = Rows.allCases[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TrackingAdsCell", for: indexPath) as? TrackingAdsCell else { return UITableViewCell() }
         
-        cell.iconImageView.image = row.image
+//        cell.iconImageView.image = row.image
+        cell.iconImageView.image = row.image.withTintColor(.white)
         cell.titleLabel.text = row.title
-        
+        cell.selectionStyle = .none
         return cell
     }
 }
@@ -64,42 +65,92 @@ private extension TrackingAdsController {
                             shadowRadius: 6.1,
                             shadowOpacity: 0.7)
         
-//        titleLabel.text = "trackingAdsTitle".localized()
-//        titleLabel.textColor = .black
-//        titleLabel.font = .systemFont(ofSize: 18, weight: .medium)
-//        
-//        descriptionLabel.text = "trackingAdsDescription".localized()
-//        descriptionLabel.textColor = .init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1)
-//        descriptionLabel.font = .systemFont(ofSize: 12, weight: .regular)
-//        
-//        continueButton.setTitleText("choose".localized())
-//        continueButton.callback = {
-//            let controller = NotificationRequestController()
-//            self.navigationController?.pushViewController(controller, animated: true)
-        }
-//    }
-    
+        titleLabel.text = "trackingAdsTitle".localized()
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont(name: "Manrope-Bold", size: 20)
+        titleLabel.numberOfLines = 2
+        titleLabel.textAlignment = .center
+        
+        descriptionLabel.text = "trackingAdsDescription".localized()
+        descriptionLabel.textColor = UIColor(named: "textGray")
+        descriptionLabel.font = UIFont(name: "Manrope-Medium", size: 12)
+        descriptionLabel.numberOfLines = 3
+        descriptionLabel.textAlignment = .center
+        
+        continueButton.setTitle("choose".localized(), for: .normal)
+        continueButton.addTarget(self, action: #selector(pushController), for: .touchUpInside)
+        continueButton.layer.cornerRadius = 32
+        continueButton.titleLabel?.font = UIFont(name: "Manrope-Bold", size: 20)
+        continueButton.setTitleColor(.white, for: .normal)
+        continueButton.backgroundColor = UIColor(named: "PurpleButton")
+        continueButton.addShadow(shadowColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor,
+                         shadowOffset: CGSize(width: 0, height: 0),
+                         shadowRadius: 6.1,
+                         shadowOpacity: 0.7)
+        
+        shopingBagImage.image = UIImage(named: "shopping-bag")
+        shopingBagImage.addShadow(shadowColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor,
+                                   shadowOffset: CGSize(width: 0, height: 0),
+                                   shadowRadius: 6.1,
+                                   shadowOpacity: 0.7)
+    }
+    @objc func pushController() {
+        let controller = NotificationRequestController()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     func setupTable() {
-//        tableView.isScrollEnabled = false
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.register(UINib(nibName: "TrackingAdsCell", bundle: nil), forCellReuseIdentifier: "TrackingAdsCell")
+        tableView.isScrollEnabled = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TrackingAdsCell", bundle: nil), forCellReuseIdentifier: "TrackingAdsCell")
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
     }
     func setUpConstraint() {
-//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-//        tableView.translatesAutoresizingMaskIntoConstraints = false
-//        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-//        continueButton.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        continueButton.translatesAutoresizingMaskIntoConstraints = false
         layerView.translatesAutoresizingMaskIntoConstraints = false
-//        shopingBagImage.translatesAutoresizingMaskIntoConstraints = false
+        shopingBagImage.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(layerView)
+        view.addSubview(continueButton)
+        view.addSubview(descriptionLabel)
+        view.addSubview(titleLabel)
+        view.addSubview(shopingBagImage)
+        view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
             layerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            layerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
-            layerView.heightAnchor.constraint(equalToConstant: 320),
-            layerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -322)
+            layerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            layerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
+            layerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -322),
+            
+            continueButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
+            continueButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            continueButton.heightAnchor.constraint(equalToConstant: 64),
+            
+            descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 53),
+            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -54),
+            descriptionLabel.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: -14),
+            descriptionLabel.heightAnchor.constraint(equalToConstant: 51),
+            
+            titleLabel.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 31),
+
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.heightAnchor.constraint(equalToConstant: 56),
+            
+            shopingBagImage.heightAnchor.constraint(equalToConstant: 90),
+            shopingBagImage.widthAnchor.constraint(equalToConstant: 90),
+            shopingBagImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            shopingBagImage.centerYAnchor.constraint(equalTo: layerView.centerYAnchor),
+            
+            tableView.bottomAnchor.constraint(equalTo: layerView.bottomAnchor, constant: -30),
+            tableView.heightAnchor.constraint(equalToConstant: 100),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 49),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -49)
             ])
     }
 }
@@ -118,8 +169,8 @@ private extension TrackingAdsController {
         
         var image: UIImage {
             switch self {
-            case .voice: return #imageLiteral(resourceName: "speakerphone")
-            case .bussines: return #imageLiteral(resourceName: "business")
+            case .voice: return #imageLiteral(resourceName: "cart")
+            case .bussines: return #imageLiteral(resourceName: "house->")
             }
         }
     }

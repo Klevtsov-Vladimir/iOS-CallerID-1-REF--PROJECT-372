@@ -13,8 +13,8 @@ final class TrackingAdsCell: UITableViewCell {
 //MARK: - Setup
 private extension TrackingAdsCell {
     func setuvvcvcxzpUI() {
-        titleLabel.textColor = .init(red: 105/255, green: 137/255, blue: 254/255, alpha: 1)
-        titleLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont(name: "Manrope-Medium", size: 16)
         self.backgroundColor = .clear
     }
 }
