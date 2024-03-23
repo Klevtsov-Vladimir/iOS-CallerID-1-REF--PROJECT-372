@@ -123,7 +123,6 @@
 		1FDE5F9E2A56ACD400BD512C /* TrackingAdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE5F9C2A56ACD400BD512C /* TrackingAdsCell.swift */; };
 		1FDE5F9F2A56ACD400BD512C /* TrackingAdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDE5F9D2A56ACD400BD512C /* TrackingAdsCell.xib */; };
 		1FDE5FA32A56C6EF00BD512C /* NotificationRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE5FA12A56C6EF00BD512C /* NotificationRequestController.swift */; };
-		1FDE5FA42A56C6EF00BD512C /* NotificationRequestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDE5FA22A56C6EF00BD512C /* NotificationRequestController.xib */; };
 		1FDE5FA92A56CE2A00BD512C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE5FA72A56CE2A00BD512C /* SearchController.swift */; };
 		1FDE5FAA2A56CE2A00BD512C /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDE5FA82A56CE2A00BD512C /* SearchController.xib */; };
 		1FDE5FAE2A57FFD600BD512C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE5FAD2A57FFD600BD512C /* DatabaseManager.swift */; };
@@ -318,7 +317,6 @@
 		1FDE5F9C2A56ACD400BD512C /* TrackingAdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingAdsCell.swift; sourceTree = "<group>"; };
 		1FDE5F9D2A56ACD400BD512C /* TrackingAdsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackingAdsCell.xib; sourceTree = "<group>"; };
 		1FDE5FA12A56C6EF00BD512C /* NotificationRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequestController.swift; sourceTree = "<group>"; };
-		1FDE5FA22A56C6EF00BD512C /* NotificationRequestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationRequestController.xib; sourceTree = "<group>"; };
 		1FDE5FA72A56CE2A00BD512C /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		1FDE5FA82A56CE2A00BD512C /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		1FDE5FAD2A57FFD600BD512C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
@@ -893,7 +891,6 @@
 			isa = PBXGroup;
 			children = (
 				1FDE5FA12A56C6EF00BD512C /* NotificationRequestController.swift */,
-				1FDE5FA22A56C6EF00BD512C /* NotificationRequestController.xib */,
 			);
 			path = NotificationRequest;
 			sourceTree = "<group>";
@@ -1379,7 +1376,6 @@
 				1F52C26D2A81172400615A1E /* ViewedProfileController.xib in Resources */,
 				1FB3277D2A64677D0029E1EA /* SpamProtectCell.xib in Resources */,
 				1F49B6862A667FFA00481313 /* PrivacyCenterController.xib in Resources */,
-				1FDE5FA42A56C6EF00BD512C /* NotificationRequestController.xib in Resources */,
 				1F49B6952A669AB700481313 /* AboutController.xib in Resources */,
 				1F69A8732A77D32600266556 /* DeactiveAccCell.xib in Resources */,
 				1F4585922A6147840089BF76 /* BetterNameController.xib in Resources */,

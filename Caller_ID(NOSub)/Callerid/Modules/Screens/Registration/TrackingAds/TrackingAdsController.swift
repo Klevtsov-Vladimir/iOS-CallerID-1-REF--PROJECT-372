@@ -40,7 +40,6 @@ extension TrackingAdsController: UITableViewDataSource {
         let row = Rows.allCases[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TrackingAdsCell", for: indexPath) as? TrackingAdsCell else { return UITableViewCell() }
         
-//        cell.iconImageView.image = row.image
         cell.iconImageView.image = row.image.withTintColor(.white)
         cell.titleLabel.text = row.title
         cell.selectionStyle = .none
