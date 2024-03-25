@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,40 +22,45 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGP-Zf-E2h" customClass="SearchView" customModule="Callerid" customModuleProvider="target">
-                    <rect key="frame" x="20" y="79" width="353" height="54"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-Hw-ZUe" customClass="NoResultsView" customModule="Callerid" customModuleProvider="target">
+                    <rect key="frame" x="106" y="260" width="181" height="130"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="54" id="lWv-WQ-rra"/>
+                        <constraint firstAttribute="width" constant="181" id="EY7-vZ-e70"/>
+                        <constraint firstAttribute="height" constant="130" id="j1E-1n-CzJ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGP-Zf-E2h" customClass="SearchView" customModule="Callerid" customModuleProvider="target">
+                    <rect key="frame" x="20" y="70" width="353" height="59"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="59" id="lWv-WQ-rra"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-UT-yFZ">
-                    <rect key="frame" x="10" y="153" width="373" height="665"/>
+                    <rect key="frame" x="20" y="154" width="353" height="360"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-Hw-ZUe" customClass="NoResultsView" customModule="Callerid" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="373" height="168"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="168" id="Aau-Pd-xt1"/>
-                            </constraints>
-                        </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6dQ-Q3-TGj">
-                            <rect key="frame" x="0.0" y="168" width="373" height="497"/>
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="360"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="360" id="9lN-ub-egs"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="sGP-Zf-E2h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3yf-Ia-OFx"/>
-                <constraint firstItem="RzH-UT-yFZ" firstAttribute="top" secondItem="sGP-Zf-E2h" secondAttribute="bottom" constant="20" id="Asd-9R-Jg5"/>
-                <constraint firstItem="sGP-Zf-E2h" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="I9A-KV-Rhq"/>
-                <constraint firstItem="RzH-UT-yFZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="UuV-8J-yJX"/>
-                <constraint firstItem="sGP-Zf-E2h" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="YC4-IO-YbM"/>
-                <constraint firstItem="RzH-UT-yFZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fsy-2H-4eB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RzH-UT-yFZ" secondAttribute="bottom" id="xSt-cU-TYl"/>
+                <constraint firstItem="RzH-UT-yFZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0TZ-76-WaC"/>
+                <constraint firstItem="sGP-Zf-E2h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="86X-oO-jPP"/>
+                <constraint firstItem="RzH-UT-yFZ" firstAttribute="top" secondItem="sGP-Zf-E2h" secondAttribute="bottom" constant="25" id="9Uz-jM-mG2"/>
+                <constraint firstItem="sGP-Zf-E2h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LxT-Ss-OjE"/>
+                <constraint firstItem="Wgb-Hw-ZUe" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hKi-le-2h6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RzH-UT-yFZ" secondAttribute="trailing" constant="20" id="lwv-kD-d6S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sGP-Zf-E2h" secondAttribute="trailing" constant="20" id="trG-JB-paY"/>
+                <constraint firstItem="Wgb-Hw-ZUe" firstAttribute="top" secondItem="sGP-Zf-E2h" secondAttribute="bottom" constant="131" id="uIs-HR-JPV"/>
             </constraints>
             <point key="canvasLocation" x="139" y="21"/>
         </view>

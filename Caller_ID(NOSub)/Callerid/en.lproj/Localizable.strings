@@ -71,9 +71,9 @@
 
 "welcome" = "Welcome";
 
-"turnOn" = "Turn On";
-"turnOnTitle" = "Caller ID is turned off";
-"turnOnSubtitle" = "Please turn on all switches in settings";
+"turnOn" = "Turn on";
+"turnOnTitle" = "CallerID is turned off";
+"turnOnSubtitle" = "Please turn on all \nswitches in settings";
 
 "noResTitle" = "No recent search results";
 "searchNum" = "Search any number";

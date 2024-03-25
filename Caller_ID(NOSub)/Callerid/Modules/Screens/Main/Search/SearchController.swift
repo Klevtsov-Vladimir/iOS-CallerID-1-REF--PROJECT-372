@@ -1,4 +1,5 @@
 import UIKit
+import CallKit
 import FloatingPanel
 
 final class SearchController: UIViewController {
@@ -6,6 +7,8 @@ final class SearchController: UIViewController {
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var searchView: UIView!
     @IBOutlet private weak var searchLabel: UILabel!
+    @IBOutlet var callsIndentTurn: CallsIndentTern!
+    @IBOutlet var SearchImage: UIImageView!
     
     private var floatingPanel: FloatingPanelController?
     private lazy var resultsController = ResultsPhonesController()
@@ -15,25 +18,49 @@ final class SearchController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(checkBlockTurned), name: NSNotification.Name("checkBlockTurned"), object: nil)
-
+//        NotificationCenter.default.addObserver(self, selector: #selector(checkBlockTurned), name: NSNotification.Name("checkBlockTurned"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTurnOnView), name: NSNotification.Name("updateTurnOnView"), object: nil)
         
-//        if Connectivity.isConnectedToInternet {
-//             print("Connected")
-//         } else {
-//             let alert = UIAlertController(title: "Error", message: "No internet connection", preferredStyle: .alert)
-//             let okAction = UIAlertAction(title: "Ok", style: .default)
-//             alert.addAction(okAction)
-//             self.present(alert, animated: true)
-//        }
         setup()
     }
-    
-    @objc func checkBlockTurned() {
-        DispatchQueue.main.async {
-            self.resultsController.tableView.reloadData()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        CallDirectoryManagerUtils.getEnabledStatusForExtension { status in
+            DispatchQueue.main.async {
+                switch status {
+                case .enabled:
+                    self.callsIndentTurn.isHidden = true
+                default:
+                    self.callsIndentTurn.isHidden = false
+                }
+            }
         }
     }
+//    @objc func checkBlockTurned() {
+//        DispatchQueue.main.async {
+//            self.resultsController.tableView.reloadData()
+//        }
+//    }
+    @objc func updateTurnOnView() {
+            CallDirectoryManagerUtils.getEnabledStatusForExtension { status in
+                DispatchQueue.main.async {
+                    switch status {
+                    case .enabled:
+                        self.callsIndentTurn.isHidden = true
+                    default:
+                        self.callsIndentTurn.isHidden = false
+                    }
+                }
+            }
+        }
 }
 
 //MARK: - Private methods
@@ -51,7 +78,8 @@ private extension SearchController {
 private extension SearchController {
     func setup() {
         sssadeqwetupUI()
-        setupFloatingPanel()
+//        setupFloatingPanel()
+        setUpCallsIndentTern()
         
         #warning("remove this")
         if realm.profileDB.isEmpty {
@@ -60,21 +88,29 @@ private extension SearchController {
     }
     
     func sssadeqwetupUI() {
-        self.view.backgroundColor = .init(red: 245/255, green: 246/255, blue: 249/255, alpha: 1)
+        if let searchImage = UIImage(named: "Search") {
+            let tintedImage = searchImage.withRenderingMode(.alwaysTemplate)
+            SearchImage.image = tintedImage
+            SearchImage.tintColor = UIColor(named: "textLightGrey")
+        }
+
         
         titleLabel.text = "welcome".localized() + ","
-        titleLabel.textColor = .init(red: 105/255, green: 137/255, blue: 254/255, alpha: 1)
+        titleLabel.textColor = .white
         
         subtitleLabel.text = "\(CorasedasadRddealm.shared.profileDB.first?.firstName ?? "") \(CorasedasadRddealm.shared.profileDB.first?.lastName ?? "")"
+        subtitleLabel.textColor = .white
         subtitleLabel.font = .systemFont(ofSize: 18, weight: .medium)
         
-        searchView.layer.cornerRadius = 10
-        searchView.layer.borderWidth = 1
-        searchView.layer.borderColor = .init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1)
-        searchView.backgroundColor = .white
+        searchView.layer.cornerRadius = 24
+        searchView.backgroundColor = UIColor(named: "textGray")
+        searchView.addShadow(shadowColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor,
+                              shadowOffset: CGSize(width: 0, height: 0),
+                              shadowRadius: 6.1,
+                              shadowOpacity: 0.7)
         
         searchLabel.text = "searchNum".localized()
-        searchLabel.textColor = .init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1)
+        searchLabel.textColor = UIColor(named: "textLightGrey")
         searchLabel.font = .systemFont(ofSize: 16, weight: .medium)
         
         let searchTapGesture = UITapGestureRecognizer(target: self, action: #selector(searchTapped))
@@ -82,37 +118,50 @@ private extension SearchController {
     }
     
     func setupFloatingPanel() {
-        floatingPanel = FloatingPanelController()
-        floatingPanel?.delegate = self
-        floatingPanel?.layout = SearchFloatingPanelLayout()
+//        floatingPanel = FloatingPanelController()
+//        floatingPanel?.delegate = self
+//        floatingPanel?.layout = SearchFloatingPanelLayout()
+//        
+//        let appearance = SurfaceAppearance()
+//        appearance.cornerRadius = 22
+//        floatingPanel?.surfaceView.appearance = appearance
+//        
+//        resultsController.didSelectCallback = { [weak self] controller in
+//            self?.hidesBottomBarWhenPushed = true
+//            self?.navigationController?.pushViewController(controller, animated: true)
+//            self?.hidesBottomBarWhenPushed = false
+//        }
+//        
+//        floatingPanel?.set(contentViewController: resultsController)
+//        floatingPanel?.addPanel(toParent: self)
+    }
+    func setUpCallsIndentTern() {
+        callsIndentTurn.titleLabel.text = "turnOnTitle".localized()
+        callsIndentTurn.subtitleLabel.text = "turnOnSubtitle".localized()
+        callsIndentTurn.layer.cornerRadius = 20
+        callsIndentTurn.layer.borderColor = UIColor(.red).cgColor
+        callsIndentTurn.layer.borderWidth = 2
         
-        let appearance = SurfaceAppearance()
-        appearance.cornerRadius = 22
-        floatingPanel?.surfaceView.appearance = appearance
-        
-        resultsController.didSelectCallback = { [weak self] controller in
-            self?.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(controller, animated: true)
-            self?.hidesBottomBarWhenPushed = false
+        callsIndentTurn.turnCallback = {
+            CXCallDirectoryManager.sharedInstance.openSettings { error in
+                print(error)
+            }
         }
-        
-        floatingPanel?.set(contentViewController: resultsController)
-        floatingPanel?.addPanel(toParent: self)
     }
 }
 
 //MARK: - FloatingPanelControllerDelegate
-extension SearchController: FloatingPanelControllerDelegate {
-    
-}
-
-//MARK: - SearchFloatingPanelLayout
-final class SearchFloatingPanelLayout: FloatingPanelLayout {
-    let position: FloatingPanelPosition = .bottom
-    let initialState: FloatingPanelState = .half
-    let anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] = [
-        .full: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
-        .half: FloatingPanelLayoutAnchor(fractionalInset: 0.4, edge: .bottom, referenceGuide: .safeArea),
-        .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.4, edge: .bottom, referenceGuide: .safeArea),
-    ]
-}
+//extension SearchController: FloatingPanelControllerDelegate {
+//    
+//}
+//
+////MARK: - SearchFloatingPanelLayout
+//final class SearchFloatingPanelLayout: FloatingPanelLayout {
+//    let position: FloatingPanelPosition = .bottom
+//    let initialState: FloatingPanelState = .half
+//    let anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] = [
+//        .full: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
+//        .half: FloatingPanelLayoutAnchor(fractionalInset: 0.4, edge: .bottom, referenceGuide: .safeArea),
+//        .tip: FloatingPanelLayoutAnchor(fractionalInset: 0.4, edge: .bottom, referenceGuide: .safeArea),
+//    ]
+//}

@@ -16,7 +16,13 @@ final class BlockListController: UIViewController {
 
         setup()
     }
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkEmptyness()

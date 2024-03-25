@@ -2,102 +2,79 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     private var searchController: SearchController?
-
     private var moreController: MoreController?
     private var premiumSpamController: PremiumSpamController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -20)
+        
         setup()
-
     }
     
-
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if #available(iOS 13, *) {
             let tabBarAppearnace = UITabBarAppearance()
-            let tabFont =  UIFont.systemFont(ofSize: 12, weight: .regular)
             
-            let selectedAttributes: [NSAttributedString.Key: Any]
-            = [NSAttributedString.Key.font: tabFont, NSAttributedString.Key.foregroundColor: UIColor.white]
-            let normalAttributes: [NSAttributedString.Key: Any]
-            = [NSAttributedString.Key.font: tabFont, NSAttributedString.Key.foregroundColor: UIColor.init(red: 231/255, green: 231/255, blue: 1, alpha: 0.8)]
+            let tabFont =  UIFont(name: "MontserratRoman-SemiBold", size: 10)
+            let tabFontSelected =  UIFont(name: "MontserratRoman-ExtraBold", size: 10)
             
-            tabBarAppearnace.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
+            let selectedAttributes: [NSAttributedString.Key: Any] = [
+                NSAttributedString.Key.font: tabFontSelected,
+                NSAttributedString.Key.foregroundColor: UIColor(named: "PurpleButton")
+            ]
+            
+            let normalAttributes: [NSAttributedString.Key: Any] = [
+                NSAttributedString.Key.font: tabFont,
+                NSAttributedString.Key.foregroundColor: UIColor(named: "textGray")
+            ]
+            
+            tabBarAppearnace.stackedLayoutAppearance.normal.iconColor = UIColor(named: "textGray")
+            tabBarAppearnace.stackedLayoutAppearance.selected.iconColor = UIColor(named: "PurpleButton")
+            
+            tabBarAppearnace.stackedLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -13)
+            
             tabBarAppearnace.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttributes
-            
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                tabBarAppearnace.inlineLayoutAppearance.normal.titleTextAttributes = normalAttributes
-                tabBarAppearnace.inlineLayoutAppearance.selected.titleTextAttributes = selectedAttributes
-                
-                tabBarAppearnace.compactInlineLayoutAppearance.normal.titleTextAttributes = normalAttributes
-                tabBarAppearnace.compactInlineLayoutAppearance.selected.titleTextAttributes = selectedAttributes
-                
-                tabBarAppearnace.inlineLayoutAppearance.selected.iconColor = .white
-                tabBarAppearnace.inlineLayoutAppearance.normal.iconColor = .init(red: 231/255, green: 231/255, blue: 1, alpha: 0.8)
-                
-                tabBarAppearnace.compactInlineLayoutAppearance.selected.iconColor = .white
-                tabBarAppearnace.compactInlineLayoutAppearance.normal.iconColor = .init(red: 231/255, green: 231/255, blue: 1, alpha: 0.8)
-                
-               
-//                tabBarAppearnace.stackedItemPositioning = .fill
-                tabBarAppearnace.stackedLayoutAppearance.selected.titlePositionAdjustment = UIOffset(horizontal: -10, vertical: 10)
-                tabBarAppearnace.stackedLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: -10, vertical: 10)
-
-                tabBarAppearnace.compactInlineLayoutAppearance.selected.titlePositionAdjustment = UIOffset(horizontal: -10, vertical: 10)
-                tabBarAppearnace.compactInlineLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: -10, vertical: 10)
-
-                tabBarAppearnace.inlineLayoutAppearance.selected.titlePositionAdjustment = UIOffset(horizontal: -10, vertical: 10)
-                tabBarAppearnace.inlineLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: -10, vertical: 10)
-                
-            } else {
-                tabBarAppearnace.stackedLayoutAppearance.normal.iconColor = .init(red: 231/255, green: 231/255, blue: 1, alpha: 0.8)
-                tabBarAppearnace.stackedLayoutAppearance.selected.iconColor = .white
-            }
-            
+            tabBarAppearnace.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
             
             tabBar.standardAppearance = tabBarAppearnace
         } else {
-            UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 4)
-            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
-            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.systemPink], for: .selected)
+            tabBar.standardAppearance.stackedLayoutAppearance.normal.iconColor = UIColor(named: "textGray")
+            tabBar.standardAppearance.stackedLayoutAppearance.selected.iconColor = UIColor(named: "PurpleButton")
         }
+        
     }
-}
-
-//MARK: - Setup
-private extension TabBarController {
-    func setup() {
+    
+    //MARK: - Setup
+    private func setup() {
         setupItems()
         
         UITabBar.appearance().tintColor = UIColor.white
         tabBarController?.tabBar.unselectedItemTintColor = UIColor.green
-        tabBar.backgroundColor = .init(red: 105/255, green: 137/255, blue: 254/255, alpha: 1)
+        tabBar.backgroundColor = .clear
+        
     }
-
+    
     func setupItems() {
         searchController = SearchController()
         
-        let searchSelected = #imageLiteral(resourceName: "searchIcon")
-        let searchUnselected = #imageLiteral(resourceName: "searchIcon")
+        let searchSelected = #imageLiteral(resourceName: "Search")
+        let searchUnselected = #imageLiteral(resourceName: "Search")
         let searchItem = UITabBarItem(
             title: "search".localized(),
             image: searchUnselected,
             selectedImage: searchSelected
         )
         if UIDevice.current.userInterfaceIdiom == .pad {
-//            searchItem.
+            //            searchItem.
         }
         
         
         moreController = MoreController()
-
-        let moreSelected = #imageLiteral(resourceName: "moreIcon")
-        let moreUnselected = #imageLiteral(resourceName: "moreIcon")
+        
+        let moreSelected = #imageLiteral(resourceName: "Name=More")
+        let moreUnselected = #imageLiteral(resourceName: "Name=More")
         let moreItem = UITabBarItem(
             title: "more".localized(),
             image: moreUnselected,
@@ -105,21 +82,23 @@ private extension TabBarController {
         )
         
         premiumSpamController = PremiumSpamController()
-
-        let premiumSelected = #imageLiteral(resourceName: "moreIcon")
-        let premiumUnselected = #imageLiteral(resourceName: "moreIcon")
+        
+        let premiumSelected = #imageLiteral(resourceName: "Name=Secure")
+        let premiumUnselected = #imageLiteral(resourceName: "Name=Secure")
         let premiumItem = UITabBarItem(
             title: "protect".localized(),
             image: premiumUnselected,
             selectedImage: premiumSelected
         )
+        searchItem.imageInsets = UIEdgeInsets(top: -3, left: 0, bottom: 3, right: 0)
+        moreItem.imageInsets = UIEdgeInsets(top: -3, left: 0, bottom: 3, right: 0)
+        premiumItem.imageInsets = UIEdgeInsets(top: -3, left: 0, bottom: 3, right: 0)
         
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            searchItem.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 10, right: -73)
-            moreItem.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 10, right: -65)
-            premiumItem.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 10, right: -76)
-        }
-        
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    searchItem.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 10, right: 0)
+                    moreItem.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 10, right: -65)
+                    premiumItem.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 10, right: -56)
+                }
         searchController?.tabBarItem = searchItem
         moreController?.tabBarItem = moreItem
         premiumSpamController?.tabBarItem = premiumItem
@@ -129,15 +108,62 @@ private extension TabBarController {
             let moreController = self.moreController,
             let premiumController = self.premiumSpamController
         else { return }
-
+        
         let searchNavigation = UINavigationController(rootViewController: searchController)
         let moreNavigation = UINavigationController(rootViewController: moreController)
         let premiumNavigation = UINavigationController(rootViewController: premiumController)
-
- 
-            self.viewControllers = [searchNavigation, premiumNavigation, moreNavigation]
-
         
+        self.viewControllers = [searchNavigation, premiumNavigation, moreNavigation]
         self.selectedIndex = 0
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let tabBarHeight: CGFloat = 63
+        let distanceFromBottom: CGFloat = 57
+        
+        var tabBarFrame = self.tabBar.frame
+        tabBarFrame.origin.y = self.view.frame.height - distanceFromBottom - tabBarHeight
+        tabBarFrame.size.height = tabBarHeight
+        
+        self.tabBar.frame = tabBarFrame
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        guard let items = tabBar.items, items.count > 0 else { return }
+        
+        let itemWidth: CGFloat = 62
+        let itemHeight: CGFloat = 63
+        
+        tabBar.subviews.forEach { view in
+            if view.backgroundColor == .clear || view.backgroundColor == .white {
+                view.removeFromSuperview()
+            }
+        }
+        for (index, item) in items.enumerated() {
+            let itemCenterX = (CGFloat(index) + 0.5) * (tabBar.frame.width / CGFloat(items.count))
+            let squareView = UIView(frame: CGRect(x: itemCenterX - (itemWidth / 2), y: 0, width: itemWidth, height: itemHeight))
+            if index != selectedIndex {
+                squareView.backgroundColor = .clear
+                squareView.layer.borderWidth = 1
+                squareView.layer.borderColor = UIColor.gray.cgColor
+            } else {
+                squareView.backgroundColor = .white
+                squareView.layer.borderWidth = 0
+                squareView.addShadow(
+                    shadowColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor,
+                    shadowOffset: CGSize(width: 0, height: 0),
+                    shadowRadius: 6.1,
+                    shadowOpacity: 0.7
+                )
+            }
+            squareView.layer.cornerRadius = 20
+            tabBar.insertSubview(squareView, at: 0)
+        }
+    }
+    
 }
+

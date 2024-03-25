@@ -14,6 +14,8 @@ final class SearchView: NibDesignable {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.layer.cornerRadius = 29
+        self.layer.masksToBounds = true
         sedsfdsfsdftusdfdsfpUI()
     }
 }

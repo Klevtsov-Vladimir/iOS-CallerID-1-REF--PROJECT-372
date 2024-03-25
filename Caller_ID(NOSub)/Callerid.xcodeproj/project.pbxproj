@@ -173,6 +173,7 @@
 		1FF9D49D2A5C51A100755085 /* ReaSDFSlmSerDFvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF9D49C2A5C51A100755085 /* ReaSDFSlmSerDFvice.swift */; };
 		1FF9D4A12A5C632200755085 /* FindPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF9D49F2A5C632200755085 /* FindPhoneController.swift */; };
 		1FF9D4A22A5C632200755085 /* FindPhoneController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF9D4A02A5C632200755085 /* FindPhoneController.xib */; };
+		6F6DC73B2BB1DDC900BF20DE /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DC73A2BB1DDC900BF20DE /* Montserrat.ttf */; };
 		6FC979582BA8A23100B5BEF1 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC979572BA8A23100B5BEF1 /* GoogleMobileAds */; };
 		6FC9795B2BA8A24C00B5BEF1 /* GoogleUserMessagingPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC9795A2BA8A24C00B5BEF1 /* GoogleUserMessagingPlatform */; };
 		6FC9796F2BA8CA0D00B5BEF1 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC9796E2BA8CA0D00B5BEF1 /* Reachability */; };
@@ -365,6 +366,7 @@
 		1FF9D4A02A5C632200755085 /* FindPhoneController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPhoneController.xib; sourceTree = "<group>"; };
 		394B96B096A951B5A3EF6206 /* Pods-CallDirectoryExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallDirectoryExtension.release.xcconfig"; path = "Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5F917DC3ABD8F70B42837A23 /* Pods-Callerid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callerid.debug.xcconfig"; path = "Target Support Files/Pods-Callerid/Pods-Callerid.debug.xcconfig"; sourceTree = "<group>"; };
+		6F6DC73A2BB1DDC900BF20DE /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		6FC979782BA8E16000B5BEF1 /* Manrope[wght].ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope[wght].ttf"; sourceTree = "<group>"; };
 		6FC9797A2BA8E53B00B5BEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoaderController.xib; sourceTree = "<group>"; };
 		6FC9797F2BA8E68200B5BEF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoaderController.strings; sourceTree = "<group>"; };
@@ -1170,6 +1172,7 @@
 		6FC9795C2BA8BDAD00B5BEF1 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6F6DC73A2BB1DDC900BF20DE /* Montserrat.ttf */,
 				6FC979782BA8E16000B5BEF1 /* Manrope[wght].ttf */,
 				1F4C6F852A69894B00FCEC0D /* Archivo_Condensed-SemiBold.ttf */,
 			);
@@ -1350,6 +1353,7 @@
 				1FE728772A5EFA2800A402A0 /* FunctionsPhoneCell.xib in Resources */,
 				1FE294262A53426F00343EBD /* MainButton.xib in Resources */,
 				1FDE5FAA2A56CE2A00BD512C /* SearchController.xib in Resources */,
+				6F6DC73B2BB1DDC900BF20DE /* Montserrat.ttf in Resources */,
 				1F49B6A42A66EE3D00481313 /* BlockReportCell.xib in Resources */,
 				1FA2EF812A659480000F1ACE /* EditProfileController.xib in Resources */,
 				1FB482992A53410700228689 /* LaunchScreen.storyboard in Resources */,

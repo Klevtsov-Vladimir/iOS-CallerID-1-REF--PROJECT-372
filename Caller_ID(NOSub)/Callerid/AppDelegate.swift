@@ -75,12 +75,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func openMainApp() -> UIViewController {
         if (UserDefaults.standard.string(forKey: "phone")?.isEmpty ?? false) || UserDefaults.standard.string(forKey: "phone")?.isEmpty == nil {
-//            return OnboardingSettingsController()
-            return TrackingAdsController()
+//main            return OnboardingSettingsController()
+//            return TrackingAdsController()
+            return TabBarController()
         } else {
             if UserDefaults.standard.bool(forKey: "isSetProfileInfo") {
-//                return TabBarController()
-                return TrackingAdsController()
+//main               return TabBarController()
+//                return TrackingAdsController()
+                return TabBarController()
             } else {
                 return CreateProfileController()
             }

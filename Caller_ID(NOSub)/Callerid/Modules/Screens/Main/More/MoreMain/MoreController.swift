@@ -16,6 +16,13 @@ final class MoreController: UIViewController {
         
         tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
 }
 
 //MARK: - Private methods

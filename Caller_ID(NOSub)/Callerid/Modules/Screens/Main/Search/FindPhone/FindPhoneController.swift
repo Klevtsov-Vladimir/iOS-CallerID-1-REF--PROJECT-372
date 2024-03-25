@@ -33,6 +33,13 @@ final class FindPhoneController: UIViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
 }
 
 //MARK: - Private methods
@@ -65,7 +72,7 @@ private extension FindPhoneController {
 //MARK: - UITableViewDelegate
 extension FindPhoneController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
+        return 50
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -367,7 +374,8 @@ private extension FindPhoneController {
         
         self.searchView.numberLabel?.text = country.first?.countries?.dialCode
         
-        
+        searchView.layer.cornerRadius = 24
+        searchView.backgroundColor = .green
         searchView.textField.resignFirstResponder()
         searchView.cancelCallback = { [weak self] in
             self?.dismiss(animated: true)
