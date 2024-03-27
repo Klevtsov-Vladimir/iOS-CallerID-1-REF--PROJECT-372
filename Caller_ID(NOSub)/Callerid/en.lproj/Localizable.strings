@@ -84,7 +84,7 @@
 "block" = "Block";
 "unblock" = "Unblock";
 
-"callDetailTitle" = "Identified by CallerId";
+"callDetailTitle" = "Identified by CallerID";
 "funcSave" = "Save to contacts";
 "funcName" = "Suggest a better name";
 "funcWeb" = "Search on web";

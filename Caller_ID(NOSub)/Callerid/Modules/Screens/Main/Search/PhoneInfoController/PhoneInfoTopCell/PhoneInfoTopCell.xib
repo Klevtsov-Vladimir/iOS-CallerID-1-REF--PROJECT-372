@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -32,11 +31,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hXK-nr-zNY">
-                        <rect key="frame" x="95" y="125.33333333333331" width="272" height="64"/>
+                        <rect key="frame" x="95" y="147.33333333333334" width="272" height="64"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dW-26-iTT" customClass="FunctionsView" customModule="Callerid" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="5qb-pe-dk3"/>
                                     <constraint firstAttribute="height" constant="64" id="Ib6-2e-eKw"/>
@@ -44,17 +42,17 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6c0-wo-6PX" customClass="FunctionsView" customModule="Callerid" customModuleProvider="target">
                                 <rect key="frame" x="104" y="0.0" width="64" height="64"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pE-Up-QUt" customClass="FunctionsView" customModule="Callerid" customModuleProvider="target">
                                 <rect key="frame" x="208" y="0.0" width="64" height="64"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sny-Hp-Re2">
-                        <rect key="frame" x="210" y="258" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sny-Hp-Re2" userLabel="countryLabel">
+                        <rect key="frame" x="210.33333333333334" y="111.33333333333333" width="41.333333333333343" height="19.999999999999986"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Uwc-59-QRb"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -62,10 +60,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="5Y3-Ni-sqY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5tP-Hj-27m"/>
-                    <constraint firstItem="hXK-nr-zNY" firstAttribute="top" secondItem="H63-mR-Jnb" secondAttribute="bottom" constant="16" id="GhE-4l-30m"/>
                     <constraint firstItem="H63-mR-Jnb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="f4C-lO-fQr"/>
                     <constraint firstItem="H63-mR-Jnb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="goP-tI-yck"/>
                     <constraint firstItem="H63-mR-Jnb" firstAttribute="top" secondItem="5Y3-Ni-sqY" secondAttribute="bottom" constant="17" id="n6a-0X-jk6"/>
+                    <constraint firstItem="hXK-nr-zNY" firstAttribute="top" secondItem="sny-Hp-Re2" secondAttribute="bottom" constant="16" id="oO2-TR-6AO"/>
+                    <constraint firstItem="sny-Hp-Re2" firstAttribute="top" secondItem="H63-mR-Jnb" secondAttribute="bottom" constant="2" id="sPh-VJ-hdX"/>
                     <constraint firstItem="5Y3-Ni-sqY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="unK-OV-pKK"/>
                 </constraints>
             </tableViewCellContentView>
@@ -73,11 +72,13 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="hXK-nr-zNY" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="8vp-gw-t1Q"/>
+                <constraint firstItem="sny-Hp-Re2" firstAttribute="centerX" secondItem="njF-e1-oar" secondAttribute="centerX" id="n5W-6l-tpg"/>
             </constraints>
             <connections>
                 <outlet property="avatarImageView" destination="5Y3-Ni-sqY" id="fOZ-jZ-eCZ"/>
                 <outlet property="blockFuncView" destination="1pE-Up-QUt" id="hDc-xD-hzy"/>
                 <outlet property="callFuncView" destination="1dW-26-iTT" id="wPM-MY-BpL"/>
+                <outlet property="countryLabel" destination="sny-Hp-Re2" id="k8r-zB-biL"/>
                 <outlet property="messageFuncView" destination="6c0-wo-6PX" id="ojS-yt-EOL"/>
                 <outlet property="phoneLabel" destination="H63-mR-Jnb" id="0yQ-dR-96f"/>
             </connections>
@@ -86,8 +87,5 @@
     </objects>
     <resources>
         <image name="defaultUserAvatar" width="30" height="30"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

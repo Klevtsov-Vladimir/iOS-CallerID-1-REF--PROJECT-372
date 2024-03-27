@@ -454,6 +454,7 @@ extension PhoneInfoController: UITableViewDataSource {
                 .replacingOccurrences(of: "(", with: "")
                 .replacingOccurrences(of: ")", with: "")
             cell.phoneLabel.text = realmPhone.name
+            cell.countryLabel.text = realmPhone.country
 //            if contact.contact == nil {
 //                if isPhoneInRealm() {
 //
@@ -472,15 +473,15 @@ extension PhoneInfoController: UITableViewDataSource {
             
             UIView.animate(withDuration: 0.3) {
                 if !self.isNumberBlocked(number: phone) {
-                    cell.callFuncView.imageView.image = #imageLiteral(resourceName: "callUnblocked")
-                    cell.messageFuncView.imageView.image = #imageLiteral(resourceName: "messegeUnblocked")
-                    cell.blockFuncView.imageView.image = #imageLiteral(resourceName: "blockUnblocked")
+                    cell.callFuncView.imageView.image = #imageLiteral(resourceName: "callppl")
+                    cell.messageFuncView.imageView.image = #imageLiteral(resourceName: "message")
+                    cell.blockFuncView.imageView.image = #imageLiteral(resourceName: "slash")
                     cell.avatarImageView.image = #imageLiteral(resourceName: "FrameAvatar")
                     
                 } else {
-                    cell.blockFuncView.imageView.image = #imageLiteral(resourceName: "callIconBlocked")
-                    cell.messageFuncView.imageView.image = #imageLiteral(resourceName: "messageBlocked")
-                    cell.callFuncView.imageView.image = #imageLiteral(resourceName: "phoneBlocked")
+                    cell.blockFuncView.imageView.image = #imageLiteral(resourceName: "Icons (5)")
+                    cell.messageFuncView.imageView.image = #imageLiteral(resourceName: "Icons (4)")
+                    cell.callFuncView.imageView.image = #imageLiteral(resourceName: "call (1)")
                     cell.avatarImageView.image = #imageLiteral(resourceName: "callIconBlocked")
                 }
             }
@@ -663,9 +664,9 @@ private extension PhoneInfoController {
     }
     
     func setuvcxswwweepUI() {
-        titleLabel.text = "callDetailTitle".localized().uppercased()
-        titleLabel.textColor = .black
-        titleLabel.font = .init(name: "Archivo_Condensed-SemiBold", size: 18)//.systemFont(ofSize: 18, weight: .medium)
+        titleLabel.text = "callDetailTitle".localized()
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont(name: "Manrope-Bold", size: 20)
         
         self.navigationController?.navigationBar.isHidden = true
     }

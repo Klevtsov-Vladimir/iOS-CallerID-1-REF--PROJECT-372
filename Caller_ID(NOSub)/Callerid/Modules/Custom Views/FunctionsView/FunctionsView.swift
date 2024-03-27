@@ -3,7 +3,7 @@ import UIKit
 final class FunctionsView: NibDesignable {
  
     @IBOutlet private(set) weak var imageView: UIImageView!
-    //@IBOutlet private(set) weak var titleLabel: UILabel!
+    @IBOutlet var backView: UIView!
     
     var callback: (()->())?
     
@@ -24,15 +24,13 @@ private extension FunctionsView {
 //MARK: - Setup
 private extension FunctionsView {
     func setupUI() {
-//        containerImageView.layer.cornerRadius = 8
-//        containerImageView.layer.borderColor = UIColor.init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1).cgColor
-//        containerImageView.layer.borderWidth = 1
-        
-//        titleLabel.textColor = .lightGray
-//        titleLabel.font = .systemFont(ofSize: 12, weight: .regular)
-        imageView.backgroundColor = .red
-        imageView.layer.cornerRadius = 32
-        imageView.clipsToBounds = true
+        backView.backgroundColor = .white
+        backView.layer.cornerRadius = 32
+        backView.addShadow(shadowColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor,
+                            shadowOffset: CGSize(width: 0, height: 0),
+                            shadowRadius: 6.1,
+                            shadowOpacity: 0.7)
+       
         imageView.contentMode = .scaleAspectFill
         imageView.isUserInteractionEnabled = true
 

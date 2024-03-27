@@ -10,6 +10,7 @@ final class PhoneInfoTopCell: UITableViewCell {
     @IBOutlet private(set) weak var callFuncView: FunctionsView!
     @IBOutlet private(set) weak var messageFuncView: FunctionsView!
     @IBOutlet private(set) weak var blockFuncView: FunctionsView!
+    @IBOutlet var countryLabel: UILabel!
     
     var callback: ((FuncCallbackType)->())?
     
@@ -42,6 +43,9 @@ private extension PhoneInfoTopCell {
         
         phoneLabel.textColor = .white
         phoneLabel.font = UIFont(name: "Manrope-SemiBold", size: 24)
+        
+        countryLabel.font = UIFont(name: "Manrope-Medium", size: 14)
+        countryLabel.textColor = UIColor(named: "textLightGrey")
         
         callFuncView.imageView.image = #imageLiteral(resourceName: "phone3")
         
