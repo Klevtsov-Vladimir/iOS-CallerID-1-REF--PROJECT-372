@@ -65,6 +65,13 @@ final class PhoneInfoController: UIViewController, UIViewControllerTransitioning
         self.navigationController?.navigationBar.isHidden = true
         tableView.reloadData()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        view.addGradient(colors: [UIColor(named: "bg1stColor") ?? .clear, UIColor(named: "bg2ndColor") ?? .clear],
+                         startPoint: CGPoint(x: 0.5, y: 0),
+                         endPoint: CGPoint(x: 0.5, y: 1))
+    }
 }
 
 //MARK: - Private methods
@@ -404,7 +411,7 @@ extension PhoneInfoController: UITableViewDelegate {
         switch row {
         case .top: return 253
         case .banner: return 0
-        case .address: return 90
+//        case .address: return 90
         case .functions: return 240
         }
     }
@@ -465,19 +472,16 @@ extension PhoneInfoController: UITableViewDataSource {
             
             UIView.animate(withDuration: 0.3) {
                 if !self.isNumberBlocked(number: phone) {
-                    cell.callFuncView.imageView.image = #imageLiteral(resourceName: "phone3")
-                    cell.messageFuncView.imageView.image = #imageLiteral(resourceName: "message")
-                    cell.blockFuncView.imageView.image = #imageLiteral(resourceName: "block")
-                    cell.avatarImageView.image = #imageLiteral(resourceName: "defaultUserAvatar")
-                    cell.containerAvatarImageView.backgroundColor = .init(red: 231/255, green: 231/255, blue: 1, alpha: 1)
-                    cell.blockFuncView.titleLabel.text = "block".localized()
+                    cell.callFuncView.imageView.image = #imageLiteral(resourceName: "callUnblocked")
+                    cell.messageFuncView.imageView.image = #imageLiteral(resourceName: "messegeUnblocked")
+                    cell.blockFuncView.imageView.image = #imageLiteral(resourceName: "blockUnblocked")
+                    cell.avatarImageView.image = #imageLiteral(resourceName: "FrameAvatar")
+                    
                 } else {
                     cell.blockFuncView.imageView.image = #imageLiteral(resourceName: "callIconBlocked")
                     cell.messageFuncView.imageView.image = #imageLiteral(resourceName: "messageBlocked")
                     cell.callFuncView.imageView.image = #imageLiteral(resourceName: "phoneBlocked")
                     cell.avatarImageView.image = #imageLiteral(resourceName: "callIconBlocked")
-                    cell.containerAvatarImageView.backgroundColor = .init(red: 232/255, green: 115/255, blue: 122/255, alpha: 0.2)
-                    cell.blockFuncView.titleLabel.text = "unblock".localized()
                 }
             }
             
@@ -489,7 +493,7 @@ extension PhoneInfoController: UITableViewDataSource {
                     if (self?.isNumberBlocked(number: phone) ?? false) {
                         self?.blockNumber(type: .remove(number: phone))
                         
-                        cell.blockFuncView.titleLabel.text = "block".localized()
+//                        cell.blockFuncView.titleLabel.text = "block".localized()
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             self?.blockView.isHidden = false
@@ -511,7 +515,7 @@ extension PhoneInfoController: UITableViewDataSource {
                             controller.callback = {
                                 self?.blockView.isHidden = false
                                 self?.blockLabel.text = "blockBan".localized()
-                                cell.blockFuncView.titleLabel.text = "unblock".localized()
+//                                cell.blockFuncView.titleLabel.text = "unblock".localized()
                                 UIView.animate(withDuration: 0.8) {
                                     self?.blockView.alpha = 1
                                 } completion: { _ in
@@ -545,13 +549,13 @@ extension PhoneInfoController: UITableViewDataSource {
             cell.rootController = self
             
             return cell
-        case .address:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneAddressCell", for: indexPath) as? PhoneAddressCell else { return UITableViewCell() }
-            
-            cell.titleLabel.text = "address".localized()
-            cell.subtitleLabel.text = realmPhone.country
-            
-            return cell
+//        case .address:
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneAddressCell", for: indexPath) as? PhoneAddressCell else { return UITableViewCell() }
+//            
+//            cell.titleLabel.text = "address".localized()
+//            cell.subtitleLabel.text = realmPhone.country
+//            
+//            return cell
         case .functions:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FunctionsPhoneCell", for: indexPath) as? FunctionsPhoneCell else { return UITableViewCell() }
             
@@ -734,7 +738,7 @@ struct Contact {
 
 private extension PhoneInfoController {
     enum Rows: Int, CaseIterable {
-        case top, banner, address, functions
+        case top, banner, /*address,*/ functions
     }
 }
 

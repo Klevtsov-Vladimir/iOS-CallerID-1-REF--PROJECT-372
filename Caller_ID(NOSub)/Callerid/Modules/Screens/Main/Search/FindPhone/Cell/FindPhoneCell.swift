@@ -20,6 +20,7 @@ final class FindPhoneCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.backgroundColor = .clear
         setsdsdfupUtvscvsrssI()
     }
 }
@@ -28,20 +29,22 @@ final class FindPhoneCell: UITableViewCell {
 extension FindPhoneCell {
     func setsdsdfupUtvscvsrssI() {
         containerAvatarView.layer.cornerRadius = containerAvatarView.frame.height / 2
-        containerAvatarView.backgroundColor = .init(red: 231/255, green: 231/255, blue: 1, alpha: 1)
+        containerAvatarView.backgroundColor = UIColor(named: "textLightGrey")
         
-        avatarLabel.textColor = .black
+        avatarLabel.textColor = .white
         avatarLabel.font = .systemFont(ofSize: 20, weight: .medium)
         
-        titleLabel.textColor = .black
-        titleLabel.font = .systemFont(ofSize: 16, weight: .medium)
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont(name: "Manrope-Medium", size: 16)
         
-        subtitleLabel.textColor = .init(red: 105/255, green: 137/255, blue: 254/255, alpha: 1)
-        subtitleLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        subtitleLabel.textColor = UIColor(named: "textLightGrey")
+        subtitleLabel.font = UIFont(name: "Manrope-Medium", size: 13)
         
-        dateLabel.textColor = .init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1)
-        dateLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        dateLabel.textColor = UIColor(named: "textLightGrey")
+        dateLabel.font = UIFont(name: "Manrope-Medium", size: 13)
         
         self.selectionStyle = .none
+        
+        arrowImage.tintColor = .gray
     }
 }

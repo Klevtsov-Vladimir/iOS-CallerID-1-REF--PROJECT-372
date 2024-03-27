@@ -13,7 +13,7 @@ final class NoResultsView: NibDesignable {
 //MARK: - Setup
 private extension NoResultsView {
     func setupUI() {
-        titleLabel.textColor = .lightGray
-        titleLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        titleLabel.textColor = UIColor(named: "textLightGrey")
+        titleLabel.font = UIFont(name: "Manrope-Medium", size: 16)
     }
 }

@@ -64,37 +64,33 @@ extension SearchView: UITextFieldDelegate {
 //MARK: - Setup
 private extension SearchView {
     func sedsfdsfsdftusdfdsfpUI() {
-        let leftView = UIView(frame: CGRect(x: 0, y: 11, width: 76, height: 22))
-        leftView.addRightBorder(with: .lightGray, andWidth: 1)
-        numberLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 76, height: 22))
-        numberLabel?.textColor = .init(red: 105.0/255, green: 137.0/255, blue: 254.0/255, alpha: 1)
-        numberLabel?.font = .systemFont(ofSize: 16, weight: .medium)
+        let leftView = UIView(frame: CGRect(x: 0, y: 11, width: 35, height: 29))
+        leftView.addRightBorderWithPadding(with: .black, andWidth: 1, padding: 10)
+        numberLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 25, height: 29))
+        numberLabel?.textColor = .black
+        numberLabel?.font = UIFont(name: "Manrope-SemiBold", size: 18)
         numberLabel?.textAlignment = .center
         leftView.addSubview(numberLabel ?? UILabel())
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(numberViewsdfsdfsdfsdTapped))
         leftView.addGestureRecognizer(gesture)
-        
-        let gestureRight = UITapGestureRecognizer(target: self, action: #selector(cdsfsdlearTapsfsdfsfdsped))
-        let rightView = UIView(frame: CGRect(x: 0, y: 11, width: 76, height: 22))
-        rightView.addGestureRecognizer(gestureRight)
-        let imageView = UIImageView(frame: CGRect(x: 38, y: 0, width: 22, height: 22))
-        imageView.image = #imageLiteral(resourceName: "closeRound")
-        rightView.addSubview(imageView)
+ 
         
         textField.delegate = self
         textField.addTarget(self, action: #selector(textChjfnvjkfnvjfjvanged), for: .editingChanged)
-        textField.keyboardType = .numberPad
-        textField.font = .systemFont(ofSize: 16, weight: .medium)
+        textField.keyboardType = .phonePad
+        textField.keyboardAppearance = UIKeyboardAppearance.dark
+        textField.font = UIFont(name: "Manrope-Medium", size: 18)
         textField.leftView = leftView
-        textField.rightView = rightView
+        textField.leftView?.frame = CGRect(x: 0, y: 0, width: 45, height: 29)
         textField.rightViewMode = .whileEditing
         textField.leftViewMode = .always
+        textField.borderStyle = .none
         textField.attributedPlaceholder = NSAttributedString(
             string: "searchNum".localized(),
             attributes: [
-                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .medium),
-                NSAttributedString.Key.foregroundColor: UIColor.init(red: 178.0/255, green: 178.0/255, blue: 178.0/255, alpha: 1)
+                NSAttributedString.Key.font: UIFont(name: "Manrope-Medium", size: 18),
+                NSAttributedString.Key.foregroundColor: UIColor(named: "textGray")
             ]
         )
         

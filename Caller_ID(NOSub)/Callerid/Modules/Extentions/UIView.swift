@@ -32,6 +32,14 @@ extension UIView {
         border.frame = CGRect(x: frame.size.width - borderWidth, y: 0, width: borderWidth, height: frame.size.height)
         addSubview(border)
     }
+    func addRightBorderWithPadding(with color: UIColor?, andWidth borderWidth: CGFloat, padding: CGFloat = 20) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleHeight, .flexibleLeftMargin]
+        border.frame = CGRect(x: frame.size.width - borderWidth - padding, y: 0, width: borderWidth, height: frame.size.height)
+        addSubview(border)
+    }
+
 }
 
 

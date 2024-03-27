@@ -72,7 +72,7 @@ private extension FindPhoneController {
 //MARK: - UITableViewDelegate
 extension FindPhoneController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -374,8 +374,7 @@ private extension FindPhoneController {
         
         self.searchView.numberLabel?.text = country.first?.countries?.dialCode
         
-        searchView.layer.cornerRadius = 24
-        searchView.backgroundColor = .green
+        
         searchView.textField.resignFirstResponder()
         searchView.cancelCallback = { [weak self] in
             self?.dismiss(animated: true)
